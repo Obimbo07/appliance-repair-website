@@ -42,6 +42,7 @@ export default function Header() {
           <Link href="/services" className="relative hover:text-purple-600 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-600 after:transition-all after:duration-300 hover:after:w-full">Services</Link>
           <Link href="/about" className="relative hover:text-purple-600 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-600 after:transition-all after:duration-300 hover:after:w-full">About</Link>
           <Link href="/projects" className="relative hover:text-purple-600 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-600 after:transition-all after:duration-300 hover:after:w-full">Projects</Link>
+          <Link href="/blog" className="relative hover:text-purple-600 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-600 after:transition-all after:duration-300 hover:after:w-full">Blog</Link>
           <Link href="/contact" className="relative hover:text-purple-600 transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-600 after:transition-all after:duration-300 hover:after:w-full">Contact</Link>
         </nav>
 
@@ -83,6 +84,7 @@ export default function Header() {
           <Link href="/services" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Services</Link>
           <Link href="/about" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>About</Link>
           <Link href="/projects" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Projects</Link>
+          <Link href="/blog" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link href="/contact" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Contact</Link>
           <div className="flex items-center gap-2 text-orange-500 font-semibold pt-2 border-t border-gray-200">
             <Phone size={20} />
