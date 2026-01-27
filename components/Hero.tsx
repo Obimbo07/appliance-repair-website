@@ -141,40 +141,40 @@ export default function Hero() {
             <input 
               type="text" 
               placeholder="Your Name" 
-              className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input 
                 type="tel" 
                 placeholder="Phone" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
               <input 
                 type="email" 
                 placeholder="Email" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <input 
               type="text" 
               placeholder="Address" 
-              className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
             <input 
               type="text" 
               placeholder="ZIP Code" 
-              className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input 
                 type="date" 
                 placeholder="Date of Visit" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
               <input 
                 type="time" 
                 placeholder="Time of Visit" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <button 
