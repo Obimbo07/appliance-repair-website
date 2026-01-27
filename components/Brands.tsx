@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 const brands = [
   'LG',
@@ -14,25 +14,99 @@ const brands = [
 ]
 
 export default function Brands() {
+
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (isHovered) return;
+    const slider = sliderRef.current;
+    if (!slider) return;
+    const scrollAmount = 1.2; // px per tick
+    const interval = setInterval(() => {
+      if (!slider) return;
+      // If at end, reset to start for infinite loop
+      if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth - 2) {
+        slider.scrollTo({ left: 0, behavior: 'auto' });
+      } else {
+        slider.scrollBy({ left: scrollAmount, behavior: 'auto' });
+      }
+    }, 16); // ~60fps
+    return () => clearInterval(interval);
+  }, [isHovered]);
+
+  // Manual scroll for buttons (optional, keep for accessibility)
+  const scroll = (direction: 'left' | 'right') => {
+    const slider = sliderRef.current;
+    if (slider) {
+      const scrollAmount = 220;
+      slider.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <section 
-      className="relative py-20"
-      style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop)',
-        backgroundBlend: 'multiply',
-        backgroundColor: 'rgba(0,0,0,0.7)'
-      }}
+      className="relative py-20 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Blurred background image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop)',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'blur(6px)',
+          transform: 'scale(1.1)',
+        }}
+      />
+      {/* Dark overlay for better contrast */}
+      <div className="absolute inset-0 z-0 bg-black/70" />
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Brands Section */}
         <div className="mb-16">
           <h3 className="text-center text-gray-400 text-lg mb-12">We Repair All Major Brand Appliances</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {brands.map((brand, idx) => (
-              <div key={idx} className="text-center text-gray-300 font-semibold">
-                {brand}
-              </div>
-            ))}
+          <div className="relative">
+            <button
+              aria-label="Scroll brands left"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full p-2"
+              onClick={() => scroll('left')}
+              style={{ display: 'block' }}
+            >
+              <span aria-hidden="true">&#8592;</span>
+            </button>
+            <div
+              ref={sliderRef}
+              className="flex gap-8 px-12"
+              style={{ 
+                overflow: 'hidden',
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {/* Duplicate brands for seamless infinite scroll */}
+              {[...brands, ...brands].map((brand, idx) => (
+                <div
+                  key={idx}
+                  className="min-w-[180px] bg-white/10 border border-white/20 shadow rounded px-6 py-5 text-lg font-semibold text-gray-200 flex-shrink-0 text-center backdrop-blur"
+                >
+                  {brand}
+                </div>
+              ))}
+            </div>
+            <button
+              aria-label="Scroll brands right"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full p-2"
+              onClick={() => scroll('right')}
+              style={{ display: 'block' }}
+            >
+              <span aria-hidden="true">&#8594;</span>
+            </button>
           </div>
         </div>
 
