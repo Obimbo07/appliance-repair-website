@@ -115,7 +115,7 @@ export default function ProjectsPage() {
             Join our list of satisfied customers. Book a service appointment today and let our experts handle your appliance repair needs.
           </p>
           <a 
-            href="https://wa.me/254700000000?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
+            href="https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-orange-500 text-white px-8 py-3 font-bold rounded hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"

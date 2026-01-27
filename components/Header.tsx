@@ -50,9 +50,9 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-4">
           <div className="hidden lg:flex items-center gap-2 text-orange-500 font-semibold group">
             <Phone size={20} className="group-hover:animate-pulse" />
-            <span className="group-hover:text-orange-600 transition-colors duration-300">+254 700 000 000</span>
+            <span className="group-hover:text-orange-600 transition-colors duration-300">0716 029 811</span>
           </div>
-          <a href="https://wa.me/254700000000?text=Hello%20Applicare" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-6 py-2 font-bold hover:bg-green-600 hover:scale-105 transition-all duration-300 hover:shadow-lg">
+          <a href="https://wa.me/254716029811?text=Hello%20Applicare" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-6 py-2 font-bold hover:bg-green-600 hover:scale-105 transition-all duration-300 hover:shadow-lg">
             WhatsApp
           </a>
           <button 
@@ -88,10 +88,10 @@ export default function Header() {
           <Link href="/contact" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Contact</Link>
           <div className="flex items-center gap-2 text-orange-500 font-semibold pt-2 border-t border-gray-200">
             <Phone size={20} />
-            <span>+254 700 000 000</span>
+            <span>0716 029 811 / 0723 585 580</span>
           </div>
           <div className="flex flex-col gap-2 pt-2 border-t border-gray-200">
-            <a href="https://wa.me/254700000000?text=Hello%20Applicare" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-4 py-2 font-bold hover:bg-green-600 text-center rounded transition-all duration-300 hover:scale-[1.02]">
+            <a href="https://wa.me/254716029811?text=Hello%20Applicare" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-4 py-2 font-bold hover:bg-green-600 text-center rounded transition-all duration-300 hover:scale-[1.02]">
               WhatsApp
             </a>
             <button 

@@ -98,7 +98,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://wa.me/254700000000?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
+              href="https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-8 py-3 font-bold rounded hover:bg-green-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -106,10 +106,10 @@ export default function ServicesPage() {
               WhatsApp Us
             </a>
             <a 
-              href="tel:+254700000000"
+              href="tel:0716029811"
               className="bg-white text-orange-500 px-8 py-3 font-bold rounded hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              Call +254 700 000 000
+              Call 0716 029 811
             </a>
           </div>
         </div>

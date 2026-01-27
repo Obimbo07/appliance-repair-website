@@ -73,7 +73,7 @@ Message: ${formData.message}`
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-800">Phone</h3>
-                    <p className="text-gray-600">+254 700 000 000</p>
+                    <p className="text-gray-600">0716 029 811 / 0723 585 580</p>
                     <p className="text-sm text-gray-500">Call or WhatsApp us anytime</p>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ Message: ${formData.message}`
               {/* Quick Contact Buttons */}
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/254700000000?text=Hello%20Applicare" 
+                  href="https://wa.me/254716029811?text=Hello%20Applicare" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white px-6 py-3 font-bold rounded hover:bg-green-600 transition-all duration-300 text-center hover:scale-105 hover:shadow-lg"
@@ -124,7 +124,7 @@ Message: ${formData.message}`
                   WhatsApp Us
                 </a>
                 <a 
-                  href="tel:+254700000000"
+                  href="tel:0716029811"
                   className="bg-orange-500 text-white px-6 py-3 font-bold rounded hover:bg-orange-600 transition-all duration-300 text-center hover:scale-105 hover:shadow-lg"
                 >
                   Call Now

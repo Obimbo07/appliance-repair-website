@@ -142,7 +142,7 @@ export default function AboutPage() {
             Book a service appointment today and see why hundreds of customers trust us with their appliance repairs.
           </p>
           <a 
-            href="https://wa.me/254700000000?text=Hello%20Applicare%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services" 
+            href="https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-white text-orange-500 px-8 py-3 font-bold rounded hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
