@@ -6,14 +6,14 @@ import { Phone } from 'lucide-react'
 export default function Hero() {
   return (
     <section 
-      className="relative h-screen bg-cover bg-center flex items-center"
+      className="relative min-h-screen md:h-screen bg-cover bg-center flex items-center pt-20 md:pt-0"
       style={{
         backgroundImage: 'url(https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop)',
         backgroundBlend: 'multiply',
-        backgroundColor: 'rgba(0,0,0,0.6)'
+        backgroundColor: 'rgba(20,20,40,0.75)'
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 w-full grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 w-full grid lg:grid-cols-2 gap-8 md:gap-12 items-center py-8 md:py-0">
         {/* Left Content */}
         <div className="text-white space-y-6">
           <div className="inline-block bg-white text-gray-800 px-3 py-1 text-sm font-semibold">
@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
 
         {/* Right - Booking Form */}
-        <div className="bg-purple-600 p-8 rounded-lg shadow-xl">
+        <div className="bg-purple-600 p-6 md:p-8 rounded-lg shadow-xl hidden lg:block">
           <h2 className="text-white text-2xl font-bold mb-6">Request Your Services</h2>
           <p className="text-gray-200 text-sm mb-6">Schedule your home appliance repair online – 24/7 availability</p>
           
