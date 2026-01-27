@@ -1,59 +1,68 @@
 'use client'
 
 import React from 'react'
-import { Shield, Users, Zap, Clock } from 'lucide-react'
+import { Refrigerator, Waves, Coffee, Tv } from 'lucide-react'
 
 const services = [
   {
-    icon: Shield,
-    title: 'Expert Repairs',
-    description: 'Certified technicians with years of hands-on experience in refrigerators, washing machines, cookers, microwaves, dishwashers, and commercial kitchen equipment.',
+    icon: Refrigerator,
+    title: 'Refrigerator Repair',
+    description: 'We diagnose and fix cooling issues, leaks, unusual noises, and more to keep your food fresh and safe.',
   },
   {
-    icon: Clock,
-    title: 'Fast Turnaround',
-    description: 'Same-day or next-day service wherever possible. We understand your time matters and appliance downtime disrupts your life.',
+    icon: Waves,
+    title: 'Washing Machine Repair',
+    description: 'From leaks and drainage issues to spin cycle malfunctions, we will get your laundry back on track.',
   },
   {
-    icon: Users,
-    title: 'Honest Pricing',
-    description: 'No hidden fees, transparent quotes, and honest recommendations. We only recommend repairs that are necessary and cost-effective.',
+    icon: Coffee,
+    title: 'Microwave & Oven Repair',
+    description: 'Expert repair for microwaves, ovens, and cooking appliances. We handle electrical issues, heating problems, and more.',
   },
   {
-    icon: Zap,
-    title: 'Quality Parts',
-    description: 'We source genuine or high-quality compatible parts to ensure durable performance and lasting repairs for all major brands.',
+    icon: Tv,
+    title: 'Other Appliances',
+    description: 'Dishwashers, water heaters, dryers, and more. We repair all major household appliances from top brands.',
   }
 ]
 
 export default function Services() {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Image */}
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1581092162562-40038f56c232?w=600&h=400&fit=crop" 
-              alt="Technician at work"
-              className="rounded-lg w-full"
-            />
-          </div>
+    <section className="py-20 md:py-28 bg-amber-50">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block bg-yellow-400 text-gray-900 font-bold px-4 py-2 mb-6">
+            Our Services
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight max-w-3xl mx-auto">
+            Comprehensive Home Appliances Repair Services
+          </h2>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
+            We offer a comprehensive range of repair services for all major home appliances. Whether your refrigerator is leaking, your oven isn't heating, or your washing machine is making strange noises, we have the solution.
+          </p>
+          <div className="w-32 h-1 bg-gray-300 mx-auto mt-8"></div>
+        </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 gap-6">
-            {services.map((service, idx) => (
-              <div key={idx} className="bg-yellow-50 p-6 rounded-lg">
-                <div className="flex items-start gap-4">
-                  <service.icon className="w-8 h-8 text-purple-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-lg text-gray-800 mb-2">{service.title}</h3>
-                    <p className="text-gray-700 text-sm">{service.description}</p>
-                  </div>
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+          {services.map((service, idx) => (
+            <div key={idx} className="flex flex-col">
+              <div className="flex items-start gap-6 mb-4">
+                <div className="flex-shrink-0">
+                  <service.icon className="w-16 h-16 text-purple-600" />
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900 pt-2">{service.title}</h3>
               </div>
-            ))}
-          </div>
+              <p className="text-gray-700 text-base leading-relaxed mb-6 ml-22">
+                {service.description}
+              </p>
+              <a href="#" className="text-purple-600 font-bold hover:text-purple-700 transition inline-flex items-center gap-1 ml-22">
+                Learn More 
+                <span>→</span>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
