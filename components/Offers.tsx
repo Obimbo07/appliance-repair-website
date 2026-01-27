@@ -4,16 +4,16 @@ import React from 'react'
 
 const offers = [
   {
-    title: 'Seasonal HVAC Maintenance',
-    description: 'Prepare your HVAC system for the season with a thorough check-up and cleaning to ensure comfortable temperatures all year.',
-    discount: '20% Off',
+    title: 'Maintenance Service Package',
+    description: 'Schedule preventive maintenance for your appliances to ensure they run smoothly and avoid costly breakdowns. Get comprehensive care for your home equipment.',
+    discount: 'Book Now',
     bgColor: 'border-purple-400 bg-purple-50',
     borderStyle: 'border-dashed'
   },
   {
-    title: 'New Customer Discount',
-    description: 'First time using our services? Enjoy a 15% discount on your first appliance repair with us—quality service at a great price.',
-    discount: '15% Off',
+    title: 'Emergency Repair Service',
+    description: 'Appliance emergency? We offer same-day service for urgent repairs. Call us anytime for fast, reliable solutions when you need them most.',
+    discount: '24/7 Ready',
     bgColor: 'border-yellow-400 bg-yellow-50',
     borderStyle: 'border-dashed'
   }

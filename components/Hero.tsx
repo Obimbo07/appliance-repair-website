@@ -25,16 +25,16 @@ export default function Hero() {
             We've got the fix.
           </h1>
           <p className="text-lg text-gray-200 border-l-4 border-yellow-400 pl-4">
-            Our certified technicians are dedicated to providing top-notch home appliance service with transparent pricing and a satisfaction guarantee.
+            Our certified technicians are dedicated to providing professional, honest, and dependable appliance repair services in Nairobi, Nakuru and surrounding regions.
           </p>
           <div className="flex gap-4 pt-4">
             <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600">
               Book Service
             </button>
-            <button className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400">
+            <a href="tel:+254700000000" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400">
               <Phone size={20} />
-              (123) 456 7890
-            </button>
+              +254 700 000 000
+            </a>
           </div>
         </div>
 

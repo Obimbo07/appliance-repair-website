@@ -4,36 +4,36 @@ import React from 'react'
 
 const serviceItems = [
   {
-    title: 'Refrigerator Repair',
-    description: 'We diagnose and fix cooling issues, leaks, unusual noises, and more to keep your food fresh and safe.',
+    title: 'Refrigerators & Freezers',
+    description: 'Fix cooling issues, leaks, unusual noises, and thermostat problems to keep your food fresh and safe.',
   },
   {
-    title: 'Washing Machine Repair',
-    description: 'From leaks and drainage issues to spin cycle malfunctions, we will get your laundry back on track.',
+    title: 'Washing Machines',
+    description: 'Top and front load repairs for leaks, drainage issues, and spin cycle malfunctions.',
   },
   {
-    title: 'Coffee Machine Repair',
-    description: 'We diagnose and fix brewing problems, leaks, and grinding issues for your perfect cup of coffee.',
+    title: 'Cookers & Ovens',
+    description: 'We repair heating elements, ignition systems, and temperature control for perfect cooking results.',
   },
   {
-    title: 'Television Repair',
-    description: 'Our technicians fix display, sound, and connectivity issues to make your TV picture-perfect.',
+    title: 'Microwaves',
+    description: 'Restore microwave heating by repairing power, turntable, sensors, and other components.',
   },
   {
-    title: 'Air Purifier Repair',
-    description: 'We restore clean air circulation to your home by fixing filter problems, sensor malfunctions, and more.',
+    title: 'Dishwashers',
+    description: 'We tackle leaks, cleaning cycles, spray arms, and drainage issues for spotless dishes.',
   },
   {
-    title: 'Microwave Repair',
-    description: 'To restore microwave heating, we repair the power, turntable, and other components.',
+    title: 'Commercial Kitchen Equipment',
+    description: 'Professional repairs for commercial-grade appliances used in restaurants and businesses.',
   },
   {
-    title: 'Sewing Machine Repair',
-    description: 'We fix threading, motor, and other sewing machine issues to get it stitching smoothly again.',
+    title: 'Water, Milk & Oil Dispensers',
+    description: 'Specialized repair and maintenance for dispensing machines used in commercial settings.',
   },
   {
-    title: 'Dishwasher Repair',
-    description: 'We tackle leaks, cleaning issues, and strange noises so your dishes come out sparkling every time.',
+    title: 'Consultation & Maintenance',
+    description: 'Expert consultancy, installation, and preventive maintenance training for all appliances.',
   }
 ]
 
@@ -86,9 +86,9 @@ export default function ServiceGrid() {
           <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600">
             Book Service
           </button>
-          <button className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
-            📞 (123) 456 7890
-          </button>
+          <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
+            📞 +254 700 000 000
+          </a>
         </div>
       </div>
     </section>
