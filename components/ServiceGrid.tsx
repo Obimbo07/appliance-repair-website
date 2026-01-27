@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { useBooking } from './BookingProvider'
 
 const serviceItems = [
   {
@@ -38,6 +39,8 @@ const serviceItems = [
 ]
 
 export default function ServiceGrid() {
+  const { openBooking } = useBooking()
+  
   return (
     <section className="py-16 bg-yellow-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -83,7 +86,10 @@ export default function ServiceGrid() {
 
         {/* CTA Section */}
         <div className="mt-16 flex justify-center gap-4">
-          <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600">
+          <button 
+            onClick={openBooking}
+            className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600"
+          >
             Book Service
           </button>
           <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">

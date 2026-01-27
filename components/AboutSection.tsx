@@ -2,8 +2,11 @@
 
 import React from 'react'
 import { Shield, Users, Zap, Clock } from 'lucide-react'
+import { useBooking } from './BookingProvider'
 
 export default function AboutSection() {
+  const { openBooking } = useBooking()
+  
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -37,7 +40,10 @@ export default function AboutSection() {
 
             {/* CTA Buttons */}
             <div className="flex gap-4 mt-8">
-              <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600">
+              <button 
+                onClick={openBooking}
+                className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600"
+              >
                 Book Service
               </button>
               <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
@@ -71,7 +77,10 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="mt-8 flex gap-4 justify-center">
-              <button className="bg-orange-500 text-white px-6 py-2 font-bold hover:bg-orange-600">
+              <button 
+                onClick={openBooking}
+                className="bg-orange-500 text-white px-6 py-2 font-bold hover:bg-orange-600"
+              >
                 Book Service
               </button>
               <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">

@@ -2,8 +2,11 @@
 
 import React from 'react'
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { useBooking } from './BookingProvider'
 
 export default function Footer() {
+  const { openBooking } = useBooking()
+  
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4">
@@ -40,7 +43,10 @@ export default function Footer() {
                 <span>info@applicare.co.ke</span>
               </div>
             </div>
-            <button className="bg-orange-500 text-white px-6 py-3 font-bold hover:bg-orange-600 mt-6 w-full">
+            <button 
+              onClick={openBooking}
+              className="bg-orange-500 text-white px-6 py-3 font-bold hover:bg-orange-600 mt-6 w-full"
+            >
               Book Service
             </button>
           </div>

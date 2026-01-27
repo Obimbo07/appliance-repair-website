@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { Phone, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useBooking } from './BookingProvider'
 
 const heroSlides = [
   {
@@ -27,6 +28,7 @@ const heroSlides = [
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  const { openBooking } = useBooking()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -117,7 +119,10 @@ export default function Hero() {
             {slide.description}
           </p>
           <div className="flex gap-4 pt-4 animate-fadeInUp animation-delay-400">
-            <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg">
+            <button 
+              onClick={openBooking}
+              className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg"
+            >
               Book Service
             </button>
             <a href="tel:+254700000000" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">

@@ -3,11 +3,12 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Phone, Menu, X } from 'lucide-react'
-import BookServiceModal from './BookServiceModal'
+import { useBooking } from './BookingProvider'
+import Image from 'next/image'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isBookingOpen, setIsBookingOpen] = useState(false)
+  const { openBooking } = useBooking()
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -19,21 +20,20 @@ export default function Header() {
   }, [])
 
   return (
-    <>
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-2' : 'bg-white shadow-md py-4'
     }`}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="w-24 h-16 bg-white border border-gray-300 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-          <div className="text-center">
-            <div className="flex gap-0.5 justify-center mb-0.5">
-              <div className="w-4 h-4 bg-orange-500 rounded-sm animate-pulse"></div>
-              <div className="w-4 h-4 bg-purple-600 rounded-sm animate-pulse animation-delay-100"></div>
-              <div className="w-4 h-4 bg-yellow-400 rounded-sm animate-pulse animation-delay-200"></div>
-            </div>
-            <p className="text-xs font-bold text-gray-800">APPLICARE</p>
-          </div>
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-all duration-300">
+          <Image 
+            src="/applicare-logo.png" 
+            alt="Applicare Logo" 
+            width={120} 
+            height={48} 
+            className="h-20 w-30 object-contain"
+            priority
+          />
         </Link>
 
         {/* Navigation */}
@@ -55,7 +55,7 @@ export default function Header() {
             WhatsApp
           </a>
           <button 
-            onClick={() => setIsBookingOpen(true)}
+            onClick={openBooking}
             className="bg-orange-500 text-white px-6 py-2 font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg"
           >
             Book Service
@@ -93,7 +93,7 @@ export default function Header() {
               WhatsApp
             </a>
             <button 
-              onClick={() => { setIsBookingOpen(true); setIsOpen(false); }}
+              onClick={() => { openBooking(); setIsOpen(false); }}
               className="bg-orange-500 text-white px-4 py-2 font-bold hover:bg-orange-600 w-full rounded transition-all duration-300 hover:scale-[1.02]"
             >
               Book Service
@@ -102,9 +102,5 @@ export default function Header() {
         </nav>
       </div>
     </header>
-    
-    {/* Book Service Modal */}
-    <BookServiceModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
-    </>
   )
 }
