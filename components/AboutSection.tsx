@@ -46,8 +46,8 @@ export default function AboutSection() {
               >
                 Book Service
               </button>
-              <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
-                <span>📞 +254 700 000 000</span>
+              <a href="tel:0716029811" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
+                <span>📞 0716 029 811</span>
               </a>
             </div>
           </div>
@@ -83,8 +83,8 @@ export default function AboutSection() {
               >
                 Book Service
               </button>
-              <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
-                📞 +254 700 000 000
+              <a href="tel:0716029811" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
+                📞 0716 029 811
               </a>
             </div>
           </div>

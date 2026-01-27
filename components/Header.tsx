@@ -29,9 +29,9 @@ export default function Header() {
           <Image 
             src="/applicare-logo.png" 
             alt="Applicare Logo" 
-            width={120} 
-            height={48} 
-            className="h-20 w-30 object-contain"
+            width={180} 
+            height={72} 
+            className="h-16 md:h-20 w-auto object-contain"
             priority
           />
         </Link>

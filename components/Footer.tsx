@@ -20,9 +20,9 @@ export default function Footer() {
               <Image 
                 src="/applicare-logo.png" 
                 alt="Applicare Logo" 
-                width={120} 
-                height={48} 
-                className="h-16 w-auto object-contain bg-white rounded p-2"
+                width={160} 
+                height={64} 
+                className="h-20 w-auto object-contain bg-white rounded p-2"
               />
             </Link>
             <p className="text-gray-400 text-sm text-center md:text-left">

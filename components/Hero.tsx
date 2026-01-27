@@ -125,9 +125,9 @@ export default function Hero() {
             >
               Book Service
             </button>
-            <a href="tel:+254700000000" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">
+            <a href="tel:0716029811" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">
               <Phone size={20} className="animate-pulse" />
-              +254 700 000 000
+              0716 029 811
             </a>
           </div>
         </div>

@@ -92,8 +92,8 @@ export default function ServiceGrid() {
           >
             Book Service
           </button>
-          <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
-            📞 +254 700 000 000
+          <a href="tel:0716029811" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
+            📞 0716 029 811 / 0723 585 580
           </a>
         </div>
       </div>

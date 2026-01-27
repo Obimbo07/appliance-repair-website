@@ -108,7 +108,7 @@ export default function Features() {
               </button>
               <a href="tel:1234567890" className="flex items-center gap-2 text-gray-800 font-semibold hover:text-orange-500 transition-colors duration-300 group">
                 <span className="group-hover:animate-pulse">📞</span>
-                (123) 456 7890
+                (254) 716 029 811
               </a>
             </div>
           </div>
