@@ -6,26 +6,26 @@ import { Shield, Users, Zap, Clock } from 'lucide-react'
 const reasons = [
   {
     icon: Shield,
-    title: 'Certified Technicians',
-    description: 'Our certified technicians can diagnose and repair all major brands of household appliances.',
+    title: 'Skilled & Certified Technicians',
+    description: 'Our team brings real experience and ongoing training to diagnose and repair all major household and commercial appliances.',
     bgColor: 'bg-purple-100'
   },
   {
     icon: Users,
-    title: 'Local & Trusted',
-    description: "We're your neighbors, dedicated to serving our community with top-notch appliance care.",
+    title: 'Community-Focused Service',
+    description: 'We are your trusted neighbors in Nairobi, Nakuru and surrounding regions, dedicated to supporting local families and businesses.',
     bgColor: 'bg-yellow-50'
   },
   {
     icon: Zap,
-    title: 'Transparent Pricing',
-    description: 'No hidden fees or surprises. We provide upfront estimates before starting any work.',
+    title: 'Honest & Transparent Pricing',
+    description: 'No hidden fees or unnecessary repairs. Just clear, fair quotes and solutions that work within budget.',
     bgColor: 'bg-gray-200'
   },
   {
     icon: Clock,
-    title: 'Prompt Service',
-    description: 'We understand your time is valuable, so we offer same-day or next-day appointments.',
+    title: 'Fast Turnaround',
+    description: 'We strive for same-day or next-day service wherever possible because we know your time matters.',
     bgColor: 'bg-pink-100'
   }
 ]
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
               We Bring Your Appliances Back to Life
             </h2>
             <p className="text-gray-700 mb-8">
-              Don't let a malfunctioning appliance disrupt your life. Applicare is here to provide comprehensive repair solutions for all major brands and models. We offer transparent pricing, convenient online booking, and a satisfaction guarantee, so you can have peace of mind knowing your appliances are in good hands.
+              At Applicare, our mission is simple yet powerful: to deliver fast, reliable, and affordable appliance repair services that extend the life of your machines and reduce stress. We are committed to transparent pricing, honest recommendations, genuine parts, and solutions that save you time and money.
             </p>
             
             <div className="space-y-4 mb-8">

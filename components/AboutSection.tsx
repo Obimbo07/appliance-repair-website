@@ -14,7 +14,7 @@ export default function AboutSection() {
               We Bring Your Appliances Back to Life
             </h2>
             <p className="text-gray-700 mb-8 leading-relaxed">
-              Don't let a malfunctioning appliance disrupt your life. Applicare is here to provide comprehensive repair solutions for all major brands and models. We offer transparent pricing, convenient online booking, and a satisfaction guarantee, so you can have peace of mind knowing your appliances are in good hands.
+              Applicare was born out of a simple realization: too many people in Nairobi, Nakuru and surrounding regions were struggling with unreliable repair services. We provide professional, honest, and dependable appliance repair solutions with transparent pricing, skilled technicians, and genuine parts. Whether it's a minor fault or complex electrical issue, our team restores your appliances with speed and precision.
             </p>
 
             {/* Features List */}
@@ -40,9 +40,9 @@ export default function AboutSection() {
               <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600">
                 Book Service
               </button>
-              <button className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
-                <span>📞 (123) 456 7890</span>
-              </button>
+              <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
+                <span>📞 +254 700 000 000</span>
+              </a>
             </div>
           </div>
 
@@ -74,9 +74,9 @@ export default function AboutSection() {
               <button className="bg-orange-500 text-white px-6 py-2 font-bold hover:bg-orange-600">
                 Book Service
               </button>
-              <button className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
-                📞 (123) 456 7890
-              </button>
+              <a href="tel:+254700000000" className="text-orange-500 font-bold hover:text-orange-600 flex items-center gap-2">
+                📞 +254 700 000 000
+              </a>
             </div>
           </div>
         </div>

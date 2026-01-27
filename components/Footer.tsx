@@ -29,15 +29,15 @@ export default function Footer() {
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-yellow-400 mt-1 flex-shrink-0" />
-                <span>324 King Street, FL, USA</span>
+                <span>Nairobi & Nakuru, Kenya</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={20} className="text-yellow-400 flex-shrink-0" />
-                <span>(123) 456 7890</span>
+                <span>+254 700 000 000</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={20} className="text-yellow-400 flex-shrink-0" />
-                <span>info@example.com</span>
+                <span>info@applicare.co.ke</span>
               </div>
             </div>
             <button className="bg-orange-500 text-white px-6 py-3 font-bold hover:bg-orange-600 mt-6 w-full">

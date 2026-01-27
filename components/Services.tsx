@@ -6,23 +6,23 @@ import { Shield, Users, Zap, Clock } from 'lucide-react'
 const services = [
   {
     icon: Shield,
-    title: 'Guaranteed Warranties',
-    description: 'We provide warranties on all our repairs, giving you peace of mind with our services.',
+    title: 'Expert Repairs',
+    description: 'Certified technicians with years of hands-on experience in refrigerators, washing machines, cookers, microwaves, dishwashers, and commercial kitchen equipment.',
   },
   {
     icon: Clock,
-    title: '24/7 Service Availability',
-    description: 'We offer round-the-clock service to ensure your appliances are fixed when you need them the most.',
+    title: 'Fast Turnaround',
+    description: 'Same-day or next-day service wherever possible. We understand your time matters and appliance downtime disrupts your life.',
   },
   {
     icon: Users,
-    title: 'Convenient Booking',
-    description: 'Schedule your service online 24/7 with our easy-to-use booking system, or call us directly.',
+    title: 'Honest Pricing',
+    description: 'No hidden fees, transparent quotes, and honest recommendations. We only recommend repairs that are necessary and cost-effective.',
   },
   {
     icon: Zap,
-    title: 'Quality Parts & Workmanship',
-    description: 'We use only genuine parts and back our repairs with a warranty for your peace of mind.',
+    title: 'Quality Parts',
+    description: 'We source genuine or high-quality compatible parts to ensure durable performance and lasting repairs for all major brands.',
   }
 ]
 

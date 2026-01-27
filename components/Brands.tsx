@@ -3,12 +3,14 @@
 import React from 'react'
 
 const brands = [
-  'RUUD STANLEY',
-  'JACKSMITH',
-  'BLAKE STAR',
-  'NICK & JOAN',
-  'SKYLIGHT',
-  'HUDSON SMITH'
+  'LG',
+  'SAMSUNG',
+  'HOTPOINT',
+  'BOSCH',
+  'HISENSE',
+  'BLACK & DECKER',
+  'RAMPTON',
+  'AND MORE'
 ]
 
 export default function Brands() {
@@ -25,7 +27,7 @@ export default function Brands() {
         {/* Brands Section */}
         <div className="mb-16">
           <h3 className="text-center text-gray-400 text-lg mb-12">We Repair All Major Brand Appliances</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {brands.map((brand, idx) => (
               <div key={idx} className="text-center text-gray-300 font-semibold">
                 {brand}
@@ -56,7 +58,7 @@ export default function Brands() {
             Reliable and Experienced Appliance Repair Team
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-            We are a family-owned and operated business dedicated to providing our community with honest, dependable, and affordable appliance repair services. We believe in transparent pricing, open communication, and reliable workmanship. We diagnose, repair, and maintain all major household appliance brands.
+            Since 2023, Applicare has been a trusted appliance repair partner in Nairobi, Nakuru and surrounding regions. We are committed to providing professional, honest, and dependable repair services. Our skilled technicians diagnose, repair, and maintain all major household and commercial appliance brands with transparent pricing and genuine parts.
           </p>
         </div>
       </div>
