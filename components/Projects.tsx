@@ -5,20 +5,20 @@ import { useBooking } from './BookingProvider'
 
 const projects = [
   {
-    image: 'https://images.unsplash.com/photo-1581092162562-40038f56c232?w=400&h=300&fit=crop',
-    title: 'Project 1'
+    image: '/image0.jpeg',
+    title: 'Refrigerator Repair'
   },
   {
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop',
-    title: 'Project 2'
+    image: '/image1.jpeg',
+    title: 'Washing Machine Service'
   },
   {
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=300&fit=crop',
-    title: 'Refrigerator Tune-Up'
+    image: '/image2.jpeg',
+    title: 'AC Installation'
   },
   {
-    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&h=300&fit=crop',
-    title: 'Project 4'
+    image: '/image3.jpeg',
+    title: 'Oven Repair'
   }
 ]
 

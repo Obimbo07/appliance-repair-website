@@ -65,7 +65,7 @@ export default function Features() {
             <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="relative mt-8 group">
                 <Image 
-                  src={'/repair.jpg'} 
+                  src={'/image5.jpeg'} 
                   alt="Appliance Repair" 
                   width={600} 
                   height={400} 

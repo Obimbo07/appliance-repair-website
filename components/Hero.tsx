@@ -6,19 +6,19 @@ import { useBooking } from './BookingProvider'
 
 const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop',
+    image: '/image0.jpeg',
     title: 'Broken Home Appliance?',
     subtitle: "We've got the fix.",
     description: 'Our certified technicians are dedicated to providing professional, honest, and dependable appliance repair services in Nairobi, Nakuru and surrounding regions.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop',
+    image: '/image1.jpeg',
     title: 'Fast & Reliable',
     subtitle: 'Same-Day Service Available',
     description: 'We understand the urgency when your appliances break down. Our team is ready to provide quick, efficient repairs to get your life back to normal.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&h=800&fit=crop',
+    image: '/image2.jpeg',
     title: 'Expert Technicians',
     subtitle: 'Certified & Experienced',
     description: 'Our team of certified professionals has years of experience repairing all major appliance brands with guaranteed satisfaction.',
