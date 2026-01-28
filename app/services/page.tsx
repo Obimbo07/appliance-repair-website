@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Wrench, Refrigerator, WashingMachine, Wind, Microwave, Tv, ThermometerSun, Plug, Settings } from 'lucide-react'
+import { Wrench, Refrigerator, WashingMachine, Wind, Microwave, Tv, ThermometerSun, Plug, Settings, Sun } from 'lucide-react'
 
 const services = [
   {
@@ -49,6 +49,11 @@ const services = [
     title: 'General Appliance Maintenance',
     description: 'Preventive maintenance services to keep all your appliances running smoothly. Regular maintenance extends appliance life and prevents costly repairs.',
   },
+  {
+    icon: Sun,
+    title: 'Solar System Installation',
+    description: 'Professional installation of solar panels, inverters, and battery storage systems. Reduce your electricity bills and embrace clean, renewable energy with our expert solar solutions.',
+  },
 ]
 
 export default function ServicesPage() {
@@ -57,11 +62,11 @@ export default function ServicesPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900 to-purple-700 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200')] bg-cover bg-center opacity-10" />
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 animate-fadeInDown">Our Services</h1>
-          <p className="text-xl text-purple-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
             Professional appliance repair services for all major brands. Fast, reliable, and affordable repairs by certified technicians.
           </p>
         </div>

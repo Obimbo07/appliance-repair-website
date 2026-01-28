@@ -139,9 +139,9 @@ export default function BlogPostContent({ post, relatedPosts }: BlogPostContentP
           </div>
 
           {/* CTA */}
-          <div className="mt-12 bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl p-8 text-center">
+          <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Need Professional Help?</h3>
-            <p className="text-purple-200 mb-6">
+            <p className="text-blue-200 mb-6">
               Our expert technicians are ready to help with all your appliance repair and maintenance needs.
             </p>
             <button 

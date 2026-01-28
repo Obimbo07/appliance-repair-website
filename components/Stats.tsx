@@ -130,7 +130,7 @@ export default function Stats() {
               className="rounded-lg w-full shadow-xl hover:shadow-2xl transition-shadow duration-500"
             />
             <div className="absolute -bottom-6 -right-6 bg-white px-6 py-4 rounded-lg shadow-lg animate-float">
-              <h3 className="text-3xl font-bold text-purple-600">{counters[0]}+</h3>
+              <h3 className="text-3xl font-bold text-blue-600">{counters[0]}+</h3>
               <p className="text-gray-700 text-sm">Satisfied Customers</p>
             </div>
           </div>
@@ -156,16 +156,16 @@ export default function Stats() {
                       key={idx}
                       className="w-full flex-shrink-0"
                     >
-                      <div className="bg-purple-600 text-white p-6 rounded-lg">
+                      <div className="bg-blue-600 text-white p-6 rounded-lg">
                         <div className="flex items-center gap-4 mb-4">
                           <img 
                             src={testimonial.image} 
                             alt={testimonial.name}
-                            className="w-16 h-16 rounded-full object-cover ring-4 ring-purple-400"
+                            className="w-16 h-16 rounded-full object-cover ring-4 ring-blue-400"
                           />
                           <div>
                             <h3 className="font-bold text-lg">{testimonial.name}</h3>
-                            <p className="text-purple-200">{testimonial.handle}</p>
+                            <p className="text-blue-200">{testimonial.handle}</p>
                           </div>
                           <div className="ml-auto flex gap-1">
                             {[...Array(testimonial.rating)].map((_, i) => (

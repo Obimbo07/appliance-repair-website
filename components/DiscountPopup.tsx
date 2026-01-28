@@ -56,13 +56,13 @@ Please send them their discount code.`
   if (!isVisible) return null
 
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 animate-slideInRight">
+    <div className="fixed left-0 bottom-4 z-50 animate-slideInLeft">
       {/* Main Popup */}
-      <div className="relative bg-gradient-to-b from-amber-400 to-orange-500 rounded-l-2xl shadow-2xl w-[320px] overflow-hidden">
-        {/* Decorative circles on left edge */}
-        <div className="absolute left-0 top-0 bottom-0 w-3 flex flex-col justify-around py-4">
+      <div className="relative bg-gradient-to-b from-amber-400 to-orange-500 rounded-r-2xl shadow-2xl w-[320px] overflow-hidden">
+        {/* Decorative circles on right edge */}
+        <div className="absolute right-0 top-0 bottom-0 w-3 flex flex-col justify-around py-4">
           {[...Array(12)].map((_, i) => (
-            <div key={i} className="w-3 h-3 bg-gray-900 rounded-full -ml-1.5" />
+            <div key={i} className="w-3 h-3 bg-gray-900 rounded-full -mr-1.5" />
           ))}
         </div>
 

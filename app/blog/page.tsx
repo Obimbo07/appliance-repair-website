@@ -86,12 +86,12 @@ export default function BlogPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-900 to-purple-700 py-20">
+      <section className="bg-gradient-to-r from-blue-900 to-blue-700 py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Applicare Blog
           </h1>
-          <p className="text-purple-200 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-blue-200 text-lg max-w-2xl mx-auto mb-8">
             Expert tips, maintenance guides, and industry insights to help you get the most out of your home appliances.
           </p>
           

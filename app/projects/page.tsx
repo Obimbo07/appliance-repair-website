@@ -60,11 +60,11 @@ export default function ProjectsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900 to-purple-700 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200')] bg-cover bg-center opacity-10" />
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 animate-fadeInDown">Our Projects</h1>
-          <p className="text-xl text-purple-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
             Browse through some of our recent appliance repair projects. Each project represents our commitment to quality and customer satisfaction.
           </p>
         </div>
