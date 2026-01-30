@@ -75,7 +75,7 @@ ${formData.issue || 'No additional details provided'}`
     const subject = `[${serviceTypeLabel.toUpperCase()}] ${formData.appliance} - ${formData.name}`
 
     // Option 1: Send via mailto (opens email client)
-    const mailtoLink = `mailto:info@applicare.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
+    const mailtoLink = `mailto:information@applicare.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
     
     // Option 2: Also offer WhatsApp as backup
     const whatsappMessage = `*New ${serviceTypeLabel} Booking*\n\n` +
@@ -412,7 +412,7 @@ ${formData.issue || 'No additional details provided'}`
                 )}
               </button>
               <p className="text-xs text-gray-500 text-center">
-                Your request will be sent to info@applicare.co.ke
+                Your request will be sent to information@applicare.co.ke
               </p>
             </div>
           </form>

@@ -6,13 +6,15 @@ import { useBooking } from './BookingProvider'
 
 const heroSlides = [
   {
-    image: '/image0.jpeg',
+    video: '/Video.mov',
+    poster: '/image0.jpeg',
     title: 'Broken Home Appliance?',
     subtitle: "We've got the fix.",
     description: 'Our certified technicians are dedicated to providing professional, honest, and dependable appliance repair services in Nairobi, Nakuru and surrounding regions.',
   },
   {
-    image: '/image1.jpeg',
+    video: '/Video_1.mov',
+    poster: '/image1.jpeg',
     title: 'Fast & Reliable',
     subtitle: 'Same-Day Service Available',
     description: 'We understand the urgency when your appliances break down. Our team is ready to provide quick, efficient repairs to get your life back to normal.',
@@ -55,15 +57,31 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-screen md:h-screen bg-cover bg-center flex items-center pt-20 md:pt-0 overflow-hidden transition-all duration-700"
-      style={{
-        backgroundImage: `url(${slide.image})`,
-        backgroundBlend: 'multiply',
-        backgroundColor: 'rgba(20,20,40,0.75)'
-      }}
+      className="relative min-h-screen md:h-screen flex items-center pt-20 md:pt-0 overflow-hidden transition-all duration-700"
     >
+      {/* Video or Image Background */}
+      {slide.video ? (
+        <video
+          key={currentSlide}
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={slide.poster}
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={slide.video} type="video/mp4" />
+          <source src={slide.video} type="video/quicktime" />
+        </video>
+      ) : (
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${slide.image})` }}
+        />
+      )}
+      
       {/* Animated background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-black/40" />
       
       {/* Slide navigation arrows */}
       <button 

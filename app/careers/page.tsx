@@ -93,7 +93,7 @@ export default function CareersPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:info@applicare.co.ke?subject=Career%20Inquiry%20-%20Resume%20Submission"
+                href="mailto:information@applicare.co.ke?subject=Career%20Inquiry%20-%20Resume%20Submission"
                 className="bg-orange-500 text-white px-6 py-3 font-bold rounded hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center justify-center gap-2"
               >
                 Send Your Resume

@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-yellow-400 mt-1 flex-shrink-0" />
-                <span>Nairobi & Nakuru, Kenya</span>
+                <span>Nairobi, Eldoret & Nakuru, Kenya</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={20} className="text-yellow-400 flex-shrink-0" />
@@ -44,7 +44,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={20} className="text-yellow-400 flex-shrink-0" />
-                <span>info@applicare.co.ke</span>
+                <span>information@applicare.co.ke</span>
               </div>
             </div>
             <button 

@@ -1,60 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Wrench, Refrigerator, WashingMachine, Wind, Microwave, Tv, ThermometerSun, Plug, Settings, Sun } from 'lucide-react'
-
-const services = [
-  {
-    icon: Refrigerator,
-    title: 'Refrigerator Repair',
-    description: 'Expert repair for all refrigerator types including French door, side-by-side, top/bottom freezer, and commercial units. We fix cooling issues, compressor problems, ice maker repairs, and more.',
-  },
-  {
-    icon: WashingMachine,
-    title: 'Washing Machine Repair',
-    description: 'Complete washing machine repair services for top-load, front-load, and commercial washers. We handle drainage issues, spin cycle problems, leaks, and electrical faults.',
-  },
-  {
-    icon: Wind,
-    title: 'Dryer Repair',
-    description: 'Professional dryer repair for gas and electric dryers. We fix heating issues, drum problems, ventilation, and ensure your dryer operates safely and efficiently.',
-  },
-  {
-    icon: Microwave,
-    title: 'Microwave Repair',
-    description: 'Fast microwave repair services for countertop and built-in units. We repair heating elements, turntables, control panels, and door mechanisms.',
-  },
-  {
-    icon: ThermometerSun,
-    title: 'Oven & Stove Repair',
-    description: 'Comprehensive oven and stove repair for gas and electric models. We fix burners, igniters, thermostats, heating elements, and control boards.',
-  },
-  {
-    icon: Tv,
-    title: 'Dishwasher Repair',
-    description: 'Expert dishwasher repair services. We resolve drainage issues, cleaning problems, leaks, and ensure your dishwasher runs at peak performance.',
-  },
-  {
-    icon: Wind,
-    title: 'Air Conditioner Repair',
-    description: 'Professional AC repair and maintenance. We fix cooling issues, compressor problems, refrigerant leaks, and electrical faults for all AC types.',
-  },
-  {
-    icon: Plug,
-    title: 'Freezer Repair',
-    description: 'Reliable freezer repair for chest freezers, upright freezers, and commercial units. We handle temperature issues, defrost problems, and compressor repairs.',
-  },
-  {
-    icon: Settings,
-    title: 'General Appliance Maintenance',
-    description: 'Preventive maintenance services to keep all your appliances running smoothly. Regular maintenance extends appliance life and prevents costly repairs.',
-  },
-  {
-    icon: Sun,
-    title: 'Solar System Installation',
-    description: 'Professional installation of solar panels, inverters, and battery storage systems. Reduce your electricity bills and embrace clean, renewable energy with our expert solar solutions.',
-  },
-]
+import { services } from '@/lib/service-data'
 
 export default function ServicesPage() {
   return (
@@ -77,17 +25,21 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-500 border-t-4 border-orange-500 hover-lift group animate-fadeInUp"
+              <Link
+                key={idx}
+                href={`/services/${service.slug}`}
+                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-500 border-t-4 border-orange-500 hover-lift group animate-fadeInUp cursor-pointer"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-orange-200 transition-all duration-300">
                   <service.icon className="w-7 h-7 text-orange-500" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
+                <p className="text-gray-600 leading-relaxed mb-4">{service.description}</p>
+                <span className="text-orange-500 font-semibold text-sm group-hover:text-orange-600">
+                  Learn More →
+                </span>
+              </Link>
             ))}
           </div>
         </div>

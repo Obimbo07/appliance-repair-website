@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import AnimatedCounter from '@/components/AnimatedCounter'
 import { Users, Award, Clock, Shield, Target, Heart } from 'lucide-react'
 
 const values = [
@@ -27,10 +30,10 @@ const values = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Repairs Completed' },
-  { number: '98%', label: 'Customer Satisfaction' },
-  { number: '24/7', label: 'Support Available' },
-  { number: '3+', label: 'Years Experience' },
+  { number: 500, suffix: '+', label: 'Repairs Completed' },
+  { number: 98, suffix: '%', label: 'Customer Satisfaction' },
+  { number: 24, suffix: '/7', label: 'Support Available' },
+  { number: 3, suffix: '+', label: 'Years Experience' },
 ]
 
 export default function AboutPage() {
@@ -86,7 +89,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center animate-fadeInUp hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${idx * 100}ms` }}>
-                <div className="text-4xl lg:text-5xl font-bold text-orange-400 mb-2">{stat.number}</div>
+                <AnimatedCounter 
+                  end={stat.number} 
+                  suffix={stat.suffix}
+                  duration={2500}
+                  className="text-4xl lg:text-5xl font-bold text-orange-400 mb-2"
+                />
                 <div className="text-blue-200">{stat.label}</div>
               </div>
             ))}

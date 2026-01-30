@@ -2,6 +2,207 @@
 export const blogPosts = [
   {
     id: 1,
+    slug: 'appliance-repair-services-kenya-training',
+    title: 'Appliance Repair Services in Kenya: Appliance Repair Near Me & Training | Applicare',
+    excerpt: 'Looking for professional appliance repair services in Kenya? Discover Applicare\'s fast, reliable repair solutions for washing machines, fridges, cookers, and more. Plus, learn about our hands-on appliance repair training programs.',
+    image: '/image5.jpeg',
+    category: 'Services',
+    author: 'Applicare Team',
+    date: '2026-01-29',
+    readTime: '8 min read',
+    content: `
+      <p class="lead">In today's fast-paced homes and businesses, appliances are no longer a luxury — they are a necessity. When a washing machine breaks down, a fridge stops cooling, or a cooker fails, daily life comes to a standstill. That's where Applicare Appliance Repair Services comes in — your trusted solution for appliance repair near me, professional servicing, and hands-on appliance repair training in Kenya.</p>
+
+      <h2>Professional Appliance Repair Services You Can Trust</h2>
+      <p>Applicare is a leading provider of appliance repair services in Kenya, offering fast, affordable, and professional solutions for both home and commercial appliances. Our goal is simple: help you repair instead of replace, saving you time and money.</p>
+
+      <h3>We repair all major appliances, including:</h3>
+      <ul>
+        <li>Washing machines</li>
+        <li>Refrigerators & freezers</li>
+        <li>Cookers & ovens</li>
+        <li>Microwaves</li>
+        <li>Dishwashers</li>
+        <li>Commercial kitchen equipment</li>
+      </ul>
+      <p>Whether it's a minor fault or a major breakdown, our trained technicians diagnose the issue accurately and fix it using quality parts.</p>
+
+      <h2>Appliance Repair Near Me – Fast Response, Anywhere You Are</h2>
+      <p>Searching for appliance repair near me? Applicare is built for convenience and speed. We understand how urgent appliance breakdowns can be, which is why we offer quick response times and reliable customer support.</p>
+
+      <h3>Why customers choose Applicare:</h3>
+      <ul>
+        <li>Fast same-day or next-day service</li>
+        <li>Experienced and certified technicians</li>
+        <li>Transparent pricing with no hidden costs</li>
+        <li>Repairs done at home or on-site for businesses</li>
+      </ul>
+      <p>No matter where you are, Applicare brings professional appliance repair near you.</p>
+
+      <h2>Washing Machine, Fridge & Cooker Repair Experts</h2>
+      <p>Some appliances fail more often than others due to daily use. At Applicare, we specialize in the most common household breakdowns:</p>
+
+      <h3>Washing Machine Repair Services</h3>
+      <p>From machines that won't spin, drain, or power on, our washing machine repair services restore performance and extend appliance life.</p>
+
+      <h3>Refrigerator & Freezer Repair</h3>
+      <p>If your fridge is not cooling, leaking water, or making unusual noise, our fridge repair experts fix the problem before food spoilage occurs.</p>
+
+      <h3>Cooker, Oven & Microwave Repair</h3>
+      <p>Gas and electric cookers, ovens, and microwaves require expert handling. Applicare ensures safe and professional cooker repairs for homes and businesses.</p>
+
+      <h2>Commercial Appliance Repair Services</h2>
+      <p>Businesses depend heavily on functional equipment. Applicare provides commercial appliance repair services for restaurants, hotels, offices, and institutions.</p>
+
+      <h3>We help businesses:</h3>
+      <ul>
+        <li>Reduce downtime</li>
+        <li>Lower maintenance costs</li>
+        <li>Maintain safety and efficiency</li>
+        <li>Extend appliance lifespan</li>
+      </ul>
+      <p>Our technicians understand the urgency of commercial repairs and prioritize fast turnaround times.</p>
+
+      <h2>Appliance Repair Training – Learn a Skill That Pays</h2>
+      <p>Beyond repairs, Applicare is committed to empowering the next generation of technicians through appliance repair training.</p>
+
+      <h3>Our training programs cover:</h3>
+      <ul>
+        <li>Washing machine repair training</li>
+        <li>Fridge and freezer repair training</li>
+        <li>Cooker and microwave repair</li>
+        <li>Appliance diagnostics and safety</li>
+        <li>Hands-on practical experience</li>
+      </ul>
+      <p>Whether you are a beginner, a technician upgrading skills, or someone looking for a profitable technical trade, our appliance repair training in Kenya equips you with real-world skills.</p>
+
+      <h2>Why Choose Applicare Appliance Repair Services?</h2>
+      <ul>
+        <li>✔ Trusted appliance repair experts</li>
+        <li>✔ Fast and reliable service</li>
+        <li>✔ Affordable and transparent pricing</li>
+        <li>✔ Home & commercial solutions</li>
+        <li>✔ Appliance repair training available</li>
+      </ul>
+      <p>At Applicare, we don't just fix appliances — we restore comfort, productivity, and peace of mind.</p>
+
+      <h2>Book Appliance Repair Services Today</h2>
+      <p>If you're searching for appliance repair near me, need urgent repairs, or want to enroll in appliance repair training, Applicare is ready to help.</p>
+      <p><strong>Call or WhatsApp Applicare today for fast, professional appliance repair services you can trust.</strong></p>
+      <p>We serve homes, businesses, and institutions with quality workmanship and dependable support.</p>
+      <p class="text-lg font-semibold mt-6">Applicare – Repair Don't Replace.</p>
+    `,
+  },
+  {
+    id: 2,
+    slug: 'appliance-consultancy-services-kenya',
+    title: 'Appliance Consultancy Services in Kenya | Professional Appliance Consultants – Applicare',
+    excerpt: 'Make smart appliance decisions with expert guidance. Applicare offers professional appliance consultancy services for homes and businesses in Kenya — helping you choose, install, and maintain appliances efficiently.',
+    image: '/image6.jpeg',
+    category: 'Consultancy',
+    author: 'Applicare Team',
+    date: '2026-01-28',
+    readTime: '7 min read',
+    content: `
+      <p class="lead">Choosing the right appliances for your home or business can be confusing, expensive, and risky if done incorrectly. From energy consumption to capacity, brand reliability, and long-term maintenance costs, one wrong decision can cost you thousands. Applicare Appliance Consultancy Services exist to help you make the right appliance decisions from the start.</p>
+
+      <p>If you're searching for appliance consultancy services, appliance consultants near me, or expert advice before buying or installing appliances, Applicare is your trusted partner in Kenya.</p>
+
+      <h2>What Are Appliance Consultancy Services?</h2>
+      <p>Appliance consultancy services involve professional guidance on selecting, installing, maintaining, and managing appliances for homes, businesses, and institutions. At Applicare, we help clients avoid costly mistakes by offering expert, experience-based recommendations tailored to real needs.</p>
+
+      <h3>Our appliance consultancy focuses on:</h3>
+      <ul>
+        <li>Appliance selection & sizing</li>
+        <li>Energy efficiency & power requirements</li>
+        <li>Brand and model recommendations</li>
+        <li>Installation planning</li>
+        <li>Maintenance planning & cost control</li>
+      </ul>
+
+      <h2>Professional Appliance Consultants You Can Trust</h2>
+      <p>Applicare provides professional appliance consultants in Kenya with hands-on repair and installation experience. Unlike sales-driven advice, our consultancy is independent, practical, and technical.</p>
+
+      <h3>We assess:</h3>
+      <ul>
+        <li>Your space and usage needs</li>
+        <li>Electrical and gas safety requirements</li>
+        <li>Appliance durability and spare parts availability</li>
+        <li>Long-term maintenance and repair costs</li>
+      </ul>
+      <p>This ensures you invest in appliances that perform reliably and last longer.</p>
+
+      <h2>Appliance Consultancy for Homes</h2>
+      <p>Buying home appliances without expert guidance often leads to overspending or underperformance. Our home appliance consultancy services help homeowners choose appliances that match lifestyle, budget, and space.</p>
+
+      <h3>We offer guidance on:</h3>
+      <ul>
+        <li>Washing machines & dryers</li>
+        <li>Refrigerators & freezers</li>
+        <li>Cookers, ovens & microwaves</li>
+        <li>Dishwashers</li>
+        <li>Energy-saving appliance options</li>
+      </ul>
+      <p>With Applicare, you get appliances that work efficiently without unnecessary repair costs.</p>
+
+      <h2>Commercial Appliance Consultancy Services</h2>
+      <p>Businesses require appliances that can handle heavy usage while maintaining efficiency and safety. Applicare provides commercial appliance consultancy services for:</p>
+      <ul>
+        <li>Restaurants & hotels</li>
+        <li>Hospitals & institutions</li>
+        <li>Offices & apartments</li>
+        <li>Schools & hostels</li>
+      </ul>
+
+      <h3>We help businesses:</h3>
+      <ul>
+        <li>Choose commercial-grade appliances</li>
+        <li>Reduce energy and operational costs</li>
+        <li>Plan installations correctly</li>
+        <li>Avoid frequent breakdowns</li>
+        <li>Comply with safety standards</li>
+      </ul>
+
+      <h2>Appliance Installation & System Planning</h2>
+      <p>Poor installation is one of the biggest causes of appliance failure. As part of our appliance consultancy services, Applicare advises on:</p>
+      <ul>
+        <li>Proper installation requirements</li>
+        <li>Electrical load planning</li>
+        <li>Gas line and ventilation planning</li>
+        <li>Water inlet and drainage systems</li>
+        <li>Appliance positioning for safety and performance</li>
+      </ul>
+      <p>This proactive approach prevents early breakdowns and extends appliance lifespan.</p>
+
+      <h2>Appliance Maintenance & Lifecycle Consultancy</h2>
+      <p>Applicare doesn't stop at installation. We offer appliance maintenance consultancy to help clients plan preventive servicing and reduce emergency repair costs.</p>
+
+      <h3>Our maintenance consultancy includes:</h3>
+      <ul>
+        <li>Appliance servicing schedules</li>
+        <li>Early fault detection advice</li>
+        <li>Spare parts planning</li>
+        <li>Cost-effective repair vs replacement analysis</li>
+      </ul>
+
+      <h2>Why Choose Applicare Appliance Consultancy Services?</h2>
+      <ul>
+        <li>✔ Experienced appliance consultants</li>
+        <li>✔ Independent, non-sales advice</li>
+        <li>✔ Home & commercial consultancy</li>
+        <li>✔ Cost-saving recommendations</li>
+        <li>✔ Backed by real repair experience</li>
+      </ul>
+      <p>Applicare combines consultancy, installation, repair, maintenance, and training — giving you a complete appliance support ecosystem.</p>
+
+      <h2>Book Appliance Consultancy Services Today</h2>
+      <p>Looking for appliance consultancy services in Kenya or appliance consultants near me? Applicare is ready to guide you.</p>
+      <p><strong>Call or WhatsApp Applicare today for expert appliance consultancy and professional advice you can trust.</strong></p>
+      <p class="text-lg font-semibold mt-6">Applicare – Smart Decisions. Reliable Appliances.</p>
+    `,
+  },
+  {
+    id: 3,
     slug: 'top-10-washing-machines-kenya-2026',
     title: 'Top 10 Washing Machines in Kenya — Best Picks for 2026',
     excerpt: 'Buying a washing machine in Kenya means balancing price, performance, durability, versatility, and after-sales support. Here are the top 10 models for Kenyan households.',
@@ -149,7 +350,7 @@ export const blogPosts = [
     `,
   },
   {
-    id: 2,
+    id: 5,
     slug: 'factors-to-consider-buying-home-appliances-kenya',
     title: 'Factors to Consider When Buying Home Appliances in Kenya',
     excerpt: 'Buying home appliances is a long-term investment. Learn what factors like power reliability, water quality, and spare-part availability mean for your purchase decision.',
@@ -335,7 +536,7 @@ export const blogPosts = [
     `,
   },
   {
-    id: 3,
+    id: 6,
     slug: 'why-salty-water-bad-for-washing-machine',
     title: 'Why Salty Water Is Not Good for Your Washing Machine',
     excerpt: 'Salty water can cause serious damage to your washing machine over time. Learn how salt affects your appliance and what you can do about it.',
@@ -456,7 +657,7 @@ export const blogPosts = [
     `,
   },
   {
-    id: 4,
+    id: 7,
     slug: 'best-appliance-repair-services-nakuru',
     title: 'Best Appliance Repair Services in Nakuru – Why Applicare Is the Trusted Choice',
     excerpt: 'When appliances break down in Nakuru, you need fast, reliable, and professional repair services. Learn why Applicare is the trusted choice for homes and businesses.',

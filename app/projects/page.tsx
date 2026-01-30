@@ -121,43 +121,6 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
-          {/* Video Showcase */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">Watch Our Technicians in Action</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500">
-                <video 
-                  className="w-full h-64 object-cover"
-                  controls
-                  poster="/image0.jpeg"
-                >
-                  <source src="/Video.mov" type="video/quicktime" />
-                  <source src="/Video.mov" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="p-4">
-                  <h3 className="font-bold text-gray-800">Appliance Repair in Progress</h3>
-                  <p className="text-gray-600 text-sm">See how our experts diagnose and fix appliances</p>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500">
-                <video 
-                  className="w-full h-64 object-cover"
-                  controls
-                  poster="/image1.jpeg"
-                >
-                  <source src="/Video_1.mov" type="video/quicktime" />
-                  <source src="/Video_1.mov" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="p-4">
-                  <h3 className="font-bold text-gray-800">Professional Service Delivery</h3>
-                  <p className="text-gray-600 text-sm">Quality workmanship on every repair job</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Projects Images Grid */}
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">Recent Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

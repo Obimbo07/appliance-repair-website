@@ -42,7 +42,7 @@ Date: ${new Date().toLocaleString()}
 Please send them their discount code.`
 
     // Open email client
-    window.location.href = `mailto:info@applicare.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:information@applicare.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
     setIsSubmitting(false)
     setIsSubmitted(true)

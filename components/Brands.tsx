@@ -127,16 +127,8 @@ export default function Brands() {
         <div className="relative text-center py-12">
           {/* Guarantee Badge */}
           <div className="flex justify-center mb-8">
-            <div className="relative w-32 h-32">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <circle cx="50" cy="50" r="45" fill="none" stroke="#FFD700" strokeWidth="8" />
-                <text x="50" y="45" textAnchor="middle" fill="#FFD700" fontSize="24" fontWeight="bold">
-                  Guaranteed
-                </text>
-                <text x="50" y="65" textAnchor="middle" fill="#FF5722" fontSize="20" fontWeight="bold">
-                  SATISFACTION
-                </text>
-              </svg>
+            <div className="relative w-50 h-32">
+              <Image src="/emblem-removebg-preview.png" alt="Guaranteed Satisfaction Badge" fill className="object-contain" />
             </div>
           </div>
 

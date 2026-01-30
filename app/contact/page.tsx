@@ -84,7 +84,7 @@ Message: ${formData.message}`
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-800">Email</h3>
-                    <p className="text-gray-600">info@applicare.co.ke</p>
+                    <p className="text-gray-600">information@applicare.co.ke</p>
                     <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>

@@ -33,7 +33,7 @@ const InstagramIcon = () => (
 
 const TikTokIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12.003 2.003c.01 0 .02 0 .03.001v7.163c0 3.977 3.222 7.2 7.2 7.2.01 0 .02 0 .03-.001v3.6c-4.872.01-8.83-3.947-8.84-8.82V2.003h-.42z"/>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
   </svg>
 )
 
@@ -75,9 +75,9 @@ export default function Header() {
                   <TikTokIcon />
                 </a>
               </div>
-              <div className="h-4 w-px bg-gray-600 mx-2"></div>
-              {/* Phone Number */}
-              <a href="tel:0716029811" className="flex items-center gap-2 text-white hover:text-orange-500 transition-colors duration-300">
+              {/* Phone Number - Hidden on small screens, visible from md */}
+              <div className="h-4 w-px bg-gray-600 mx-2 hidden md:block"></div>
+              <a href="tel:0716029811" className="hidden md:flex items-center gap-2 text-white hover:text-orange-500 transition-colors duration-300">
                 <div className="bg-orange-500 p-1.5 rounded">
                   <Phone size={14} />
                 </div>
@@ -100,7 +100,7 @@ export default function Header() {
                   alt="Applicare Logo" 
                   width={100} 
                   height={100} 
-                  className="h-10w-auto object-contain"
+                  className=" object-contain"
                   priority
                 />
              </div>

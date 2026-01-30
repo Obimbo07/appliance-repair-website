@@ -158,7 +158,7 @@ export default function TrainingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:info@applicare.co.ke?subject=Training%20Program%20Request&body=Hello%20Applicare%20Team%2C%0A%0AI%20am%20interested%20in%20your%20appliance%20repair%20training%20programs.%20Please%20provide%20more%20information%20about%3A%0A%0A-%20Available%20programs%0A-%20Training%20schedules%0A-%20Pricing%20and%20payment%20options%0A%0AThank%20you!"
+              href="mailto:information@applicare.co.ke?subject=Training%20Program%20Request&body=Hello%20Applicare%20Team%2C%0A%0AI%20am%20interested%20in%20your%20appliance%20repair%20training%20programs.%20Please%20provide%20more%20information%20about%3A%0A%0A-%20Available%20programs%0A-%20Training%20schedules%0A-%20Pricing%20and%20payment%20options%0A%0AThank%20you!"
               className="bg-orange-500 text-white px-8 py-4 font-bold rounded hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center justify-center gap-2 text-lg"
             >
               <Award className="w-5 h-5" />

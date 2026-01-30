@@ -6,58 +6,7 @@ import Footer from '@/components/Footer'
 import { Calendar, Clock, ArrowRight, Search, Tag } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-
-// Placeholder blog data - replace with your actual data
-const blogPosts = [
-  {
-    id: 1,
-    slug: 'top-10-washing-machines-kenya-2026',
-    title: 'Top 10 Washing Machines in Kenya — Best Picks for 2026',
-    excerpt: 'Buying a washing machine in Kenya means balancing price, performance, durability, versatility, and after-sales support. Here are the top 10 models for Kenyan households.',
-    image: '/image5.jpeg',
-    category: 'Buying Guides',
-    author: 'Applicare Team',
-    date: '2026-01-20',
-    readTime: '10 min read',
-    featured: true,
-  },
-  {
-    id: 2,
-    slug: 'factors-to-consider-buying-home-appliances-kenya',
-    title: 'Factors to Consider When Buying Home Appliances in Kenya',
-    excerpt: 'Buying home appliances is a long-term investment. Learn what factors like power reliability, water quality, and spare-part availability mean for your purchase decision.',
-    image: '/image6.jpeg',
-    category: 'Buying Guides',
-    author: 'Applicare Team',
-    date: '2026-01-18',
-    readTime: '12 min read',
-    featured: true,
-  },
-  {
-    id: 3,
-    slug: 'why-salty-water-bad-for-washing-machine',
-    title: 'Why Salty Water Is Not Good for Your Washing Machine',
-    excerpt: 'Salty water can cause serious damage to your washing machine over time. Learn how salt affects your appliance and what you can do about it.',
-    image: '/image7.jpeg',
-    category: 'Maintenance Tips',
-    author: 'Applicare Team',
-    date: '2026-01-15',
-    readTime: '8 min read',
-    featured: false,
-  },
-  {
-    id: 4,
-    slug: 'best-appliance-repair-services-nakuru',
-    title: 'Best Appliance Repair Services in Nakuru – Why Applicare Is the Trusted Choice',
-    excerpt: 'When appliances break down in Nakuru, you need fast, reliable, and professional repair services. Learn why Applicare is the trusted choice for homes and businesses.',
-    image: '/image8.jpeg',
-    category: 'Services',
-    author: 'Applicare Team',
-    date: '2026-01-14',
-    readTime: '7 min read',
-    featured: true,
-  },
-]
+import { blogPosts } from '@/lib/blog-data'
 
 const categories = [
   'All',
@@ -66,6 +15,7 @@ const categories = [
   'Energy Efficiency',
   'Buying Guides',
   'Services',
+  'Consultancy',
 ]
 
 export default function BlogPage() {
@@ -79,7 +29,8 @@ export default function BlogPage() {
     return matchesCategory && matchesSearch
   })
 
-  const featuredPosts = blogPosts.filter((post) => post.featured)
+  // Show first 4 posts as featured
+  const featuredPosts = blogPosts.slice(0, 4)
 
   return (
     <main className="min-h-screen bg-gray-50">
