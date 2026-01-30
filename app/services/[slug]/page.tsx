@@ -15,6 +15,19 @@ export default function ServiceDetailPage() {
   const slug = params?.slug as string
   const service = getServiceBySlug(slug)
 
+  // Set document title dynamically
+  React.useEffect(() => {
+    if (service) {
+      document.title = `${service.title} | Applicare - Appliance Repair Kenya`
+      
+      // Update meta description
+      const metaDescription = document.querySelector('meta[name=\"description\"]')
+      if (metaDescription) {
+        metaDescription.setAttribute('content', service.description)
+      }
+    }
+  }, [service])
+
   if (!service) {
     return (
       <main className="min-h-screen bg-gray-50">

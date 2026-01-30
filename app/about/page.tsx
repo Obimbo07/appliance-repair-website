@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AnimatedCounter from '@/components/AnimatedCounter'
@@ -37,6 +37,14 @@ const stats = [
 ]
 
 export default function AboutPage() {
+  useEffect(() => {
+    document.title = 'About Us | Applicare - Professional Appliance Repair in Kenya'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Learn about Applicare, Kenyas trusted appliance repair company. Founded in 2023, we provide honest, reliable, and affordable repair services across Nairobi, Nakuru & surrounding areas.')
+    }
+  }, [])
+
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />

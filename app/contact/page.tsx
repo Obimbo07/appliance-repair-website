@@ -1,11 +1,19 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'
 
 export default function ContactPage() {
+  useEffect(() => {
+    document.title = 'Contact Us | Applicare - Appliance Repair Kenya'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Contact Applicare for professional appliance repair services in Kenya. Call 0716 029 811 or 0723 585 580. Serving Nairobi, Nakuru & surrounding areas.')
+    }
+  }, [])
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Calendar, Clock, ArrowRight, Search, Tag } from 'lucide-react'
@@ -19,6 +19,14 @@ const categories = [
 ]
 
 export default function BlogPage() {
+  useEffect(() => {
+    document.title = 'Blog | Applicare - Appliance Repair Tips & Guides'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Expert appliance repair tips, maintenance guides, and buying advice. Learn how to care for your washing machines, refrigerators, cookers & more from Kenyas trusted repair experts.')
+    }
+  }, [])
+
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
 

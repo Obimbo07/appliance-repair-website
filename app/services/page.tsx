@@ -1,8 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { services } from '@/lib/service-data'
+
+export const metadata: Metadata = {
+  title: 'Appliance Repair Services in Kenya',
+  description: 'Professional appliance repair services for washing machines, refrigerators, cookers, microwaves, dishwashers & more. Fast, reliable service in Nairobi, Nakuru & surrounding areas. Call 0716 029 811.',
+  openGraph: {
+    title: 'Appliance Repair Services in Kenya | Applicare',
+    description: 'Professional appliance repair services for all major brands. Fast, reliable, and affordable repairs by certified technicians.',
+    type: 'website',
+  },
+}
 
 export default function ServicesPage() {
   return (
