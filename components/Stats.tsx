@@ -14,28 +14,28 @@ const testimonials = [
   {
     name: 'Freya Dean',
     handle: '@freyadean',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+    image: '/placeholder-user.jpg',
     text: 'Excellent service! The team arrived right on time and quickly diagnosed the problem with my washing machine. They had all the necessary parts on hand and completed the repair efficiently. The pricing was transparent, and the technician even gave me tips on how to prevent future issues.',
     rating: 5,
   },
   {
     name: 'James Mwangi',
     handle: '@jamesmwangi',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+    image: '/placeholder-user.jpg',
     text: 'I had an emergency with my refrigerator and Applicare came through within hours. Professional, courteous, and extremely knowledgeable. My fridge is working perfectly now. Highly recommend their services!',
     rating: 5,
   },
   {
     name: 'Sarah Kimani',
     handle: '@sarahk',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',
+    image: '/placeholder-user.jpg',
     text: 'Best appliance repair service in Nairobi! They fixed my oven that two other companies couldn\'t repair. Fair pricing and excellent workmanship. Will definitely use them again.',
     rating: 5,
   },
   {
     name: 'David Ochieng',
     handle: '@davidochieng',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+    image: '/placeholder-user.jpg',
     text: 'The technician was very professional and explained everything clearly. He fixed my AC unit quickly and it\'s been running smoothly since. Great customer service from start to finish.',
     rating: 5,
   },
@@ -125,12 +125,12 @@ export default function Stats() {
           {/* Left - Image */}
           <div className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=500&fit=crop" 
+              src="/image3.jpeg" 
               alt="Customer testimonial"
               className="rounded-lg w-full shadow-xl hover:shadow-2xl transition-shadow duration-500"
             />
             <div className="absolute -bottom-6 -right-6 bg-white px-6 py-4 rounded-lg shadow-lg animate-float">
-              <h3 className="text-3xl font-bold text-purple-600">{counters[0]}+</h3>
+              <h3 className="text-3xl font-bold text-blue-600">{counters[0]}+</h3>
               <p className="text-gray-700 text-sm">Satisfied Customers</p>
             </div>
           </div>
@@ -156,16 +156,16 @@ export default function Stats() {
                       key={idx}
                       className="w-full flex-shrink-0"
                     >
-                      <div className="bg-purple-600 text-white p-6 rounded-lg">
+                      <div className="bg-blue-600 text-white p-6 rounded-lg">
                         <div className="flex items-center gap-4 mb-4">
                           <img 
                             src={testimonial.image} 
                             alt={testimonial.name}
-                            className="w-16 h-16 rounded-full object-cover ring-4 ring-purple-400"
+                            className="w-16 h-16 rounded-full object-cover ring-4 ring-blue-400"
                           />
                           <div>
                             <h3 className="font-bold text-lg">{testimonial.name}</h3>
-                            <p className="text-purple-200">{testimonial.handle}</p>
+                            <p className="text-blue-200">{testimonial.handle}</p>
                           </div>
                           <div className="ml-auto flex gap-1">
                             {[...Array(testimonial.rating)].map((_, i) => (

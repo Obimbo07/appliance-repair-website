@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
           <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative group">
               <img 
-                src="https://images.unsplash.com/photo-1581092162562-40038f56c232?w=600&h=400&fit=crop" 
+                src="/image1.jpeg?w=600&h=400&fit=crop" 
                 alt="Technician"
                 className="rounded-lg w-full shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]"
               />

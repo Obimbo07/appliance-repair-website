@@ -1,7 +1,11 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
+<<<<<<< HEAD
 import { Refrigerator, Waves, Coffee, Tv, ChevronLeft, ChevronRight, Sun } from 'lucide-react'
+=======
+import { Refrigerator, Waves, Coffee, Tv, Sun, ChevronLeft, ChevronRight } from 'lucide-react'
+>>>>>>> 65cf41db0a6a7a7d5a3f1569065a53d4a5c5e3bf
 
 const services = [
   {
@@ -27,7 +31,11 @@ const services = [
   {
     icon: Sun,
     title: 'Solar System Installation',
+<<<<<<< HEAD
     description: 'Professional installation and maintenance of residential solar systems to harness clean, renewable energy for your home.',
+=======
+    description: 'Professional installation of solar panels, inverters, and battery systems. Go green and save on electricity bills with our expert solar solutions.',
+>>>>>>> 65cf41db0a6a7a7d5a3f1569065a53d4a5c5e3bf
   }
 ]
 

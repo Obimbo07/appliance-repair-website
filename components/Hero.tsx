@@ -2,22 +2,25 @@
 
 import React, { useEffect, useState } from 'react'
 import { Phone, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useBooking } from './BookingProvider'
 
 const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop',
+    video: '/Video.mov',
+    poster: '/image0.jpeg',
     title: 'Broken Home Appliance?',
     subtitle: "We've got the fix.",
     description: 'Our certified technicians are dedicated to providing professional, honest, and dependable appliance repair services in Nairobi, Nakuru and surrounding regions.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop',
+    video: '/Video_1.mov',
+    poster: '/image1.jpeg',
     title: 'Fast & Reliable',
     subtitle: 'Same-Day Service Available',
     description: 'We understand the urgency when your appliances break down. Our team is ready to provide quick, efficient repairs to get your life back to normal.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&h=800&fit=crop',
+    image: '/image2.jpeg',
     title: 'Expert Technicians',
     subtitle: 'Certified & Experienced',
     description: 'Our team of certified professionals has years of experience repairing all major appliance brands with guaranteed satisfaction.',
@@ -27,6 +30,7 @@ const heroSlides = [
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  const { openBooking } = useBooking()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -53,15 +57,31 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-screen md:h-screen bg-cover bg-center flex items-center pt-20 md:pt-0 overflow-hidden transition-all duration-700"
-      style={{
-        backgroundImage: `url(${slide.image})`,
-        backgroundBlend: 'multiply',
-        backgroundColor: 'rgba(20,20,40,0.75)'
-      }}
+      className="relative min-h-screen md:h-screen flex items-center pt-20 md:pt-0 overflow-hidden transition-all duration-700"
     >
+      {/* Video or Image Background */}
+      {slide.video ? (
+        <video
+          key={currentSlide}
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={slide.poster}
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={slide.video} type="video/mp4" />
+          <source src={slide.video} type="video/quicktime" />
+        </video>
+      ) : (
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${slide.image})` }}
+        />
+      )}
+      
       {/* Animated background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-black/40" />
       
       {/* Slide navigation arrows */}
       <button 
@@ -117,12 +137,15 @@ export default function Hero() {
             {slide.description}
           </p>
           <div className="flex gap-4 pt-4 animate-fadeInUp animation-delay-400">
-            <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg">
+            <button 
+              onClick={openBooking}
+              className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg"
+            >
               Book Service
             </button>
-            <a href="tel:+254700000000" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">
+            <a href="tel:0716029811" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">
               <Phone size={20} className="animate-pulse" />
-              +254 700 000 000
+              0716 029 811
             </a>
           </div>
         </div>
@@ -136,40 +159,40 @@ export default function Hero() {
             <input 
               type="text" 
               placeholder="Your Name" 
-              className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input 
                 type="tel" 
                 placeholder="Phone" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
               <input 
                 type="email" 
                 placeholder="Email" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <input 
               type="text" 
               placeholder="Address" 
-              className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
             <input 
               type="text" 
               placeholder="ZIP Code" 
-              className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input 
                 type="date" 
                 placeholder="Date of Visit" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
               <input 
                 type="time" 
                 placeholder="Time of Visit" 
-                className="w-full px-4 py-3 rounded text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all duration-300" 
+                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <button 

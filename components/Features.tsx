@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Shield, Users, Wrench, Clock } from 'lucide-react'
 import Image from 'next/image'
+import { useBooking } from './BookingProvider'
 
 const features = [
   {
@@ -30,6 +31,7 @@ const features = [
 export default function Features() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+  const { openBooking } = useBooking()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,7 +65,7 @@ export default function Features() {
             <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="relative mt-8 group">
                 <Image 
-                  src={'/repair.jpg'} 
+                  src={'/image5.jpeg'} 
                   alt="Appliance Repair" 
                   width={600} 
                   height={400} 
@@ -98,12 +100,15 @@ export default function Features() {
             }`}
             style={{ transitionDelay: '800ms' }}
             >
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <button 
+                onClick={openBooking}
+                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
                 Book Service
               </button>
               <a href="tel:1234567890" className="flex items-center gap-2 text-gray-800 font-semibold hover:text-orange-500 transition-colors duration-300 group">
                 <span className="group-hover:animate-pulse">📞</span>
-                (123) 456 7890
+                (254) 716 029 811
               </a>
             </div>
           </div>

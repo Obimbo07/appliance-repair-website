@@ -1,11 +1,19 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'
 
 export default function ContactPage() {
+  useEffect(() => {
+    document.title = 'Contact Us | Applicare - Appliance Repair Kenya'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Contact Applicare for professional appliance repair services in Kenya. Call 0716 029 811 or 0723 585 580. Serving Nairobi, Nakuru & surrounding areas.')
+    }
+  }, [])
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +41,7 @@ Subject: ${formData.subject}
 Message: ${formData.message}`
     
     // Open WhatsApp with the message
-    window.open(`https://wa.me/254700000000?text=${encodeURIComponent(message)}`, '_blank')
+    window.open(`https://wa.me/254716029811?text=${encodeURIComponent(message)}`, '_blank')
     
     setIsSubmitting(false)
     setSubmitted(true)
@@ -45,11 +53,11 @@ Message: ${formData.message}`
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900 to-purple-700 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200')] bg-cover bg-center opacity-10" />
+      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/image11.jpeg')] bg-cover bg-center opacity-10" />
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 animate-fadeInDown">Contact Us</h1>
-          <p className="text-xl text-purple-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
             Get in touch with us for all your appliance repair needs. We&apos;re here to help!
           </p>
         </div>
@@ -73,7 +81,7 @@ Message: ${formData.message}`
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-800">Phone</h3>
-                    <p className="text-gray-600">+254 700 000 000</p>
+                    <p className="text-gray-600">0716 029 811 / 0723 585 580</p>
                     <p className="text-sm text-gray-500">Call or WhatsApp us anytime</p>
                   </div>
                 </div>
@@ -84,7 +92,7 @@ Message: ${formData.message}`
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-800">Email</h3>
-                    <p className="text-gray-600">info@applicare.co.ke</p>
+                    <p className="text-gray-600">information@applicare.co.ke</p>
                     <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
@@ -116,7 +124,7 @@ Message: ${formData.message}`
               {/* Quick Contact Buttons */}
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/254700000000?text=Hello%20Applicare" 
+                  href="https://wa.me/254716029811?text=Hello%20Applicare" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white px-6 py-3 font-bold rounded hover:bg-green-600 transition-all duration-300 text-center hover:scale-105 hover:shadow-lg"
@@ -124,7 +132,7 @@ Message: ${formData.message}`
                   WhatsApp Us
                 </a>
                 <a 
-                  href="tel:+254700000000"
+                  href="tel:0716029811"
                   className="bg-orange-500 text-white px-6 py-3 font-bold rounded hover:bg-orange-600 transition-all duration-300 text-center hover:scale-105 hover:shadow-lg"
                 >
                   Call Now
@@ -165,7 +173,7 @@ Message: ${formData.message}`
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="+254 700 000 000"
+                      placeholder="0716 029 811"
                     />
                   </div>
                 </div>

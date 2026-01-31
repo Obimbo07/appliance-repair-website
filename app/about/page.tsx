@@ -1,6 +1,9 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import AnimatedCounter from '@/components/AnimatedCounter'
 import { Users, Award, Clock, Shield, Target, Heart } from 'lucide-react'
 
 const values = [
@@ -27,23 +30,31 @@ const values = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Repairs Completed' },
-  { number: '98%', label: 'Customer Satisfaction' },
-  { number: '24/7', label: 'Support Available' },
-  { number: '3+', label: 'Years Experience' },
+  { number: 500, suffix: '+', label: 'Repairs Completed' },
+  { number: 98, suffix: '%', label: 'Customer Satisfaction' },
+  { number: 24, suffix: '/7', label: 'Support Available' },
+  { number: 3, suffix: '+', label: 'Years Experience' },
 ]
 
 export default function AboutPage() {
+  useEffect(() => {
+    document.title = 'About Us | Applicare - Professional Appliance Repair in Kenya'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Learn about Applicare, Kenyas trusted appliance repair company. Founded in 2023, we provide honest, reliable, and affordable repair services across Nairobi, Nakuru & surrounding areas.')
+    }
+  }, [])
+
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900 to-purple-700 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092162562-40038f56c232?w=1200')] bg-cover bg-center opacity-10" />
+      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/image10.jpeg')] bg-cover bg-center opacity-10" />
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 animate-fadeInDown">About Applicare</h1>
-          <p className="text-xl text-purple-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
             Your trusted partner for professional appliance repair services in Nairobi, Nakuru, and surrounding regions.
           </p>
         </div>
@@ -81,13 +92,18 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-purple-900 text-white overflow-hidden">
+      <section className="py-12 bg-blue-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center animate-fadeInUp hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${idx * 100}ms` }}>
-                <div className="text-4xl lg:text-5xl font-bold text-orange-400 mb-2">{stat.number}</div>
-                <div className="text-purple-200">{stat.label}</div>
+                <AnimatedCounter 
+                  end={stat.number} 
+                  suffix={stat.suffix}
+                  duration={2500}
+                  className="text-4xl lg:text-5xl font-bold text-orange-400 mb-2"
+                />
+                <div className="text-blue-200">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -142,7 +158,7 @@ export default function AboutPage() {
             Book a service appointment today and see why hundreds of customers trust us with their appliance repairs.
           </p>
           <a 
-            href="https://wa.me/254700000000?text=Hello%20Applicare%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services" 
+            href="https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-white text-orange-500 px-8 py-3 font-bold rounded hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"

@@ -1,16 +1,21 @@
 'use client'
 
 import React, { useRef, useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const brands = [
-  'LG',
-  'SAMSUNG',
-  'HOTPOINT',
-  'BOSCH',
-  'HISENSE',
-  'BLACK & DECKER',
-  'RAMPTON',
-  'AND MORE'
+  { name: "Bosch", logo: "https://cdn.worldvectorlogo.com/logos/bosch-logo-1.svg", url: "https://www.bosch.com" },
+  { name: "Samsung", logo: "https://cdn.worldvectorlogo.com/logos/samsung-8.svg", url: "https://www.samsung.com" },
+  { name: "LG", logo: "https://cdn.worldvectorlogo.com/logos/lg-electronics.svg", url: "https://www.lg.com" },
+  { name: "Electrolux", logo: "https://cdn.worldvectorlogo.com/logos/electrolux-2.svg", url: "https://www.electrolux.com" },
+  { name: "Haier", logo: "https://cdn.worldvectorlogo.com/logos/haier-1.svg", url: "https://www.haier.com" },
+  { name: "Siemens", logo: "https://cdn.worldvectorlogo.com/logos/siemens-logo-1.svg", url: "https://www.siemens.com" },
+  { name: "Whirlpool", logo: "https://cdn.worldvectorlogo.com/logos/whirlpool-1.svg", url: "https://www.whirlpool.com" },
+  { name: "Hotpoint", logo: "https://cdn.worldvectorlogo.com/logos/hotpoint.svg", url: "https://www.hotpoint.com" },
+  { name: "Philips", logo: "https://cdn.worldvectorlogo.com/logos/philips-7.svg", url: "https://www.philips.com" },
+  { name: "Miele", logo: "https://cdn.worldvectorlogo.com/logos/miele-1.svg", url: "https://www.miele.com" },
+  { name: "GE", logo: "https://cdn.worldvectorlogo.com/logos/ge-monogram.svg", url: "https://www.ge.com" },
+  { name: "Hisense", logo: "https://cdn.worldvectorlogo.com/logos/hisense.svg", url: "https://www.hisense.com" },
 ]
 
 export default function Brands() {
@@ -56,7 +61,7 @@ export default function Brands() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop)',
+          backgroundImage: 'url(/image4.jpeg)',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -91,12 +96,20 @@ export default function Brands() {
             >
               {/* Duplicate brands for seamless infinite scroll */}
               {[...brands, ...brands].map((brand, idx) => (
-                <div
+                <a
                   key={idx}
-                  className="min-w-[180px] bg-white/10 border border-white/20 shadow rounded px-6 py-5 text-lg font-semibold text-gray-200 flex-shrink-0 text-center backdrop-blur"
+                  href={brand.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-w-[160px] h-20 bg-white/95 border border-white/20 shadow rounded-lg px-6 py-4 flex-shrink-0 flex items-center justify-center backdrop-blur hover:scale-105 hover:shadow-lg transition-all duration-300 group"
+                  title={brand.name}
                 >
-                  {brand}
-                </div>
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="max-h-10 max-w-[120px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </a>
               ))}
             </div>
             <button
@@ -114,16 +127,8 @@ export default function Brands() {
         <div className="relative text-center py-12">
           {/* Guarantee Badge */}
           <div className="flex justify-center mb-8">
-            <div className="relative w-32 h-32">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <circle cx="50" cy="50" r="45" fill="none" stroke="#FFD700" strokeWidth="8" />
-                <text x="50" y="45" textAnchor="middle" fill="#FFD700" fontSize="24" fontWeight="bold">
-                  Guaranteed
-                </text>
-                <text x="50" y="65" textAnchor="middle" fill="#FF5722" fontSize="20" fontWeight="bold">
-                  SATISFACTION
-                </text>
-              </svg>
+            <div className="relative w-50 h-32">
+              <Image src="/emblem-removebg-preview.png" alt="Guaranteed Satisfaction Badge" fill className="object-contain" />
             </div>
           </div>
 

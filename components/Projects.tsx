@@ -1,27 +1,30 @@
 'use client'
 
 import React from 'react'
+import { useBooking } from './BookingProvider'
 
 const projects = [
   {
-    image: 'https://images.unsplash.com/photo-1581092162562-40038f56c232?w=400&h=300&fit=crop',
-    title: 'Project 1'
+    image: '/image0.jpeg',
+    title: 'Refrigerator Repair'
   },
   {
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop',
-    title: 'Project 2'
+    image: '/image1.jpeg',
+    title: 'Washing Machine Service'
   },
   {
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=300&fit=crop',
-    title: 'Refrigerator Tune-Up'
+    image: '/image2.jpeg',
+    title: 'AC Installation'
   },
   {
-    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&h=300&fit=crop',
-    title: 'Project 4'
+    image: '/image3.jpeg',
+    title: 'Oven Repair'
   }
 ]
 
 export default function Projects() {
+  const { openBooking } = useBooking()
+  
   return (
     <section className="py-16 bg-purple-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -58,7 +61,10 @@ export default function Projects() {
 
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4">
-          <button className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600">
+          <button 
+            onClick={openBooking}
+            className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600"
+          >
             Book Service
           </button>
           <a href="#" className="text-gray-800 font-semibold hover:text-purple-600">

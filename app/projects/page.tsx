@@ -10,7 +10,7 @@ const projects = [
     description: 'Repaired a large commercial refrigerator for a restaurant. The unit had a faulty compressor and thermostat issues.',
     appliance: 'Commercial Refrigerator',
     brand: 'LG',
-    image: 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&h=400&fit=crop',
+    image: '/image0.jpeg',
   },
   {
     title: 'Washing Machine Drum Replacement',
@@ -18,7 +18,7 @@ const projects = [
     description: 'Complete drum replacement and bearing repair for a front-load washing machine that had severe vibration issues.',
     appliance: 'Washing Machine',
     brand: 'Samsung',
-    image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&h=400&fit=crop',
+    image: '/image1.jpeg',
   },
   {
     title: 'AC System Overhaul',
@@ -26,7 +26,7 @@ const projects = [
     description: 'Complete air conditioning system maintenance including refrigerant recharge, filter replacement, and electrical repairs.',
     appliance: 'Air Conditioner',
     brand: 'Hisense',
-    image: 'https://images.unsplash.com/photo-1631545806609-389cfc45bfbc?w=600&h=400&fit=crop',
+    image: '/image2.jpeg',
   },
   {
     title: 'Oven Heating Element Repair',
@@ -34,7 +34,7 @@ const projects = [
     description: 'Replaced faulty heating elements and repaired the thermostat in a built-in electric oven.',
     appliance: 'Electric Oven',
     brand: 'Bosch',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop',
+    image: '/image3.jpeg',
   },
   {
     title: 'Industrial Freezer Repair',
@@ -42,7 +42,7 @@ const projects = [
     description: 'Emergency repair of a commercial freezer for a supermarket. Fixed compressor and sealed refrigerant leak.',
     appliance: 'Commercial Freezer',
     brand: 'Hotpoint',
-    image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&h=400&fit=crop',
+    image: '/image4.jpeg',
   },
   {
     title: 'Dishwasher Motor Replacement',
@@ -50,7 +50,55 @@ const projects = [
     description: 'Replaced the circulation pump motor and cleaned the drainage system in a built-in dishwasher.',
     appliance: 'Dishwasher',
     brand: 'LG',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop',
+    image: '/image5.jpeg',
+  },
+  {
+    title: 'Microwave Repair',
+    location: 'Kileleshwa, Nairobi',
+    description: 'Fixed magnetron and control board issues in a countertop microwave that was not heating properly.',
+    appliance: 'Microwave',
+    brand: 'Ramtons',
+    image: '/image6.jpeg',
+  },
+  {
+    title: 'Water Heater Installation',
+    location: 'Ngong Road, Nairobi',
+    description: 'Professional installation of a new water heater system with proper electrical connections and safety checks.',
+    appliance: 'Water Heater',
+    brand: 'Ariston',
+    image: '/image7.jpeg',
+  },
+  {
+    title: 'Dryer Repair Service',
+    location: 'Runda, Nairobi',
+    description: 'Repaired heating element and replaced worn drum belt in a tumble dryer that was not drying clothes properly.',
+    appliance: 'Dryer',
+    brand: 'Whirlpool',
+    image: '/image8.jpeg',
+  },
+  {
+    title: 'Split AC Installation',
+    location: 'Mombasa Road, Nairobi',
+    description: 'Complete installation of a split air conditioning system for an office space, including electrical work and refrigerant charging.',
+    appliance: 'Air Conditioner',
+    brand: 'Midea',
+    image: '/image9.jpeg',
+  },
+  {
+    title: 'Refrigerator Compressor Replacement',
+    location: 'Thika Road, Nairobi',
+    description: 'Emergency replacement of a failed compressor in a double-door refrigerator to restore cooling functionality.',
+    appliance: 'Refrigerator',
+    brand: 'Mika',
+    image: '/image10.jpeg',
+  },
+  {
+    title: 'Cooker Repair & Maintenance',
+    location: 'South B, Nairobi',
+    description: 'Comprehensive repair of a gas cooker including burner replacement, igniter fix, and oven thermostat calibration.',
+    appliance: 'Gas Cooker',
+    brand: 'Von',
+    image: '/image11.jpeg',
   },
 ]
 
@@ -60,11 +108,11 @@ export default function ProjectsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900 to-purple-700 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200')] bg-cover bg-center opacity-10" />
+      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/image12.jpeg')] bg-cover bg-center opacity-10" />
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 animate-fadeInDown">Our Projects</h1>
-          <p className="text-xl text-purple-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
             Browse through some of our recent appliance repair projects. Each project represents our commitment to quality and customer satisfaction.
           </p>
         </div>
@@ -73,6 +121,8 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
+          {/* Projects Images Grid */}
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">Recent Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => (
               <div 
@@ -115,7 +165,7 @@ export default function ProjectsPage() {
             Join our list of satisfied customers. Book a service appointment today and let our experts handle your appliance repair needs.
           </p>
           <a 
-            href="https://wa.me/254700000000?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
+            href="https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-orange-500 text-white px-8 py-3 font-bold rounded hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
