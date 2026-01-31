@@ -9,8 +9,10 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -20,8 +22,8 @@ export default function Header() {
 
   return (
     <>
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-2' : 'bg-white shadow-md py-4'
+    <header suppressHydrationWarning className={`sticky top-0 z-50 transition-all duration-300 ${
+      mounted && isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-2' : 'bg-white shadow-md py-4'
     }`}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
@@ -75,8 +77,8 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden bg-white border-t border-gray-200 overflow-hidden transition-all duration-300 ${
-        isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+      <div suppressHydrationWarning className={`lg:hidden bg-white border-t border-gray-200 overflow-hidden transition-all duration-300 ${
+        mounted && isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
       }`}>
         <nav className="flex flex-col gap-4 p-4 text-gray-700">
           <Link href="/" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Home</Link>

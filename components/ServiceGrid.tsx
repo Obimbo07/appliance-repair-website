@@ -34,6 +34,10 @@ const serviceItems = [
   {
     title: 'Consultation & Maintenance',
     description: 'Expert consultancy, installation, and preventive maintenance training for all appliances.',
+  },
+  {
+    title: 'Solar System Installation',
+    description: 'Professional installation and maintenance of residential solar systems to harness clean, renewable energy for your home.',
   }
 ]
 
@@ -69,6 +73,7 @@ export default function ServiceGrid() {
                   {idx === 5 && <span className="text-3xl">🔥</span>}
                   {idx === 6 && <span className="text-3xl">🧵</span>}
                   {idx === 7 && <span className="text-3xl">🍽️</span>}
+                  {idx === 8 && <span className="text-3xl">☀️</span>}
                 </div>
               </div>
 

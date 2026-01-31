@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { Refrigerator, Waves, Coffee, Tv, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Refrigerator, Waves, Coffee, Tv, ChevronLeft, ChevronRight, Sun } from 'lucide-react'
 
 const services = [
   {
@@ -23,6 +23,11 @@ const services = [
     icon: Tv,
     title: 'Other Appliances',
     description: 'Dishwashers, water heaters, dryers, and more. We repair all major household appliances from top brands.',
+  },
+  {
+    icon: Sun,
+    title: 'Solar System Installation',
+    description: 'Professional installation and maintenance of residential solar systems to harness clean, renewable energy for your home.',
   }
 ]
 
