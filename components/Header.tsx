@@ -118,24 +118,24 @@ export default function Header() {
                 </Link>
                 {/* Services Dropdown */}
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-gray-100">
-                  <button 
-                    onClick={openBooking}
-                    className="w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  <Link 
+                    href="/services/consultancy"
+                    className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
                   >
                     Consultancy
-                  </button>
-                  <button 
-                    onClick={openBooking}
-                    className="w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  </Link>
+                  <Link 
+                    href="/services/maintenance"
+                    className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
                   >
                     Maintenance
-                  </button>
-                  <button 
-                    onClick={openBooking}
-                    className="w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  </Link>
+                  <Link 
+                    href="/services/repair"
+                    className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
                   >
                     Repair
-                  </button>
+                  </Link>
                 </div>
               </div>
               <Link href="/about" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
