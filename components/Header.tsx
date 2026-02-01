@@ -39,6 +39,7 @@ const TikTokIcon = () => (
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const { openBooking } = useBooking()
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -191,9 +192,51 @@ export default function Header() {
       }`}>
         <nav className="flex flex-col gap-4 p-4 text-gray-700">
           <Link href="/" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/services" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Services</Link>
+          
+          {/* Services with Dropdown */}
+          <div className="flex flex-col">
+            <button 
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              className="flex items-center justify-between hover:text-purple-600 font-semibold transition-colors duration-300 text-left"
+            >
+              <span>Services</span>
+              <ChevronDown size={18} className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? 'max-h-48 mt-2' : 'max-h-0'}`}>
+              <div className="flex flex-col gap-2 pl-4 border-l-2 border-purple-200">
+                <Link 
+                  href="/services/consultancy" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Consultancy
+                </Link>
+                <Link 
+                  href="/services/maintenance" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Maintenance
+                </Link>
+                <Link 
+                  href="/services/repair" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Repair
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 font-medium" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  View All Services
+                </Link>
+              </div>
+            </div>
+          </div>
+          
           <Link href="/about" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>About</Link>
-          <Link href="/services" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Service Areas</Link>
           <Link href="/projects" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Projects</Link>
           <Link href="/about#testimonials" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Reviews</Link>
           <Link href="/blog" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Blog</Link>
