@@ -67,7 +67,7 @@ export default function Projects() {
           >
             Book Service
           </button>
-          <a href="#" className="text-gray-800 font-semibold hover:text-purple-600">
+          <a href="/projects" className="text-gray-800 font-semibold hover:text-purple-600">
             View All Projects »
           </a>
         </div>

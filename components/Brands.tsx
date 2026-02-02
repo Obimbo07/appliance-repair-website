@@ -8,13 +8,13 @@ const brands = [
   { name: "Samsung", logo: "https://cdn.worldvectorlogo.com/logos/samsung-8.svg", url: "https://www.samsung.com" },
   { name: "LG", logo: "https://cdn.worldvectorlogo.com/logos/lg-electronics.svg", url: "https://www.lg.com" },
   { name: "Electrolux", logo: "https://cdn.worldvectorlogo.com/logos/electrolux-2.svg", url: "https://www.electrolux.com" },
-  { name: "Haier", logo: "https://cdn.worldvectorlogo.com/logos/haier-1.svg", url: "https://www.haier.com" },
-  { name: "Siemens", logo: "https://cdn.worldvectorlogo.com/logos/siemens-logo-1.svg", url: "https://www.siemens.com" },
+  // { name: "Haier", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Haier_logo.svg", url: "https://www.haier.com" },
+  { name: "Siemens", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Siemens-logo.svg/320px-Siemens-logo.svg.png", url: "https://www.siemens.com" },
   { name: "Whirlpool", logo: "https://cdn.worldvectorlogo.com/logos/whirlpool-1.svg", url: "https://www.whirlpool.com" },
   { name: "Hotpoint", logo: "https://cdn.worldvectorlogo.com/logos/hotpoint.svg", url: "https://www.hotpoint.com" },
   { name: "Philips", logo: "https://cdn.worldvectorlogo.com/logos/philips-7.svg", url: "https://www.philips.com" },
   { name: "Miele", logo: "https://cdn.worldvectorlogo.com/logos/miele-1.svg", url: "https://www.miele.com" },
-  { name: "GE", logo: "https://cdn.worldvectorlogo.com/logos/ge-monogram.svg", url: "https://www.ge.com" },
+  // { name: "GE", logo: "https://cdn.worldvectorlogo.com/logos/ge-monogram.svg", url: "https://www.ge.com" },
   { name: "Hisense", logo: "https://cdn.worldvectorlogo.com/logos/hisense.svg", url: "https://www.hisense.com" },
 ]
 
