@@ -4,7 +4,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const brands = [
-  { name: "Bosch", logo: "https://cdn.worldvectorlogo.com/logos/bosch-logo-1.svg", url: "https://www.bosch.com" },
+  // { name: "Bosch", logo: "https://cdn.worldvectorlogo.com/logos/bosch-logo-1.svg", url: "https://www.bosch.com" },
   { name: "Samsung", logo: "https://cdn.worldvectorlogo.com/logos/samsung-8.svg", url: "https://www.samsung.com" },
   { name: "LG", logo: "https://cdn.worldvectorlogo.com/logos/lg-electronics.svg", url: "https://www.lg.com" },
   { name: "Electrolux", logo: "https://cdn.worldvectorlogo.com/logos/electrolux-2.svg", url: "https://www.electrolux.com" },
@@ -15,7 +15,7 @@ const brands = [
   { name: "Philips", logo: "https://cdn.worldvectorlogo.com/logos/philips-7.svg", url: "https://www.philips.com" },
   { name: "Miele", logo: "https://cdn.worldvectorlogo.com/logos/miele-1.svg", url: "https://www.miele.com" },
   // { name: "GE", logo: "https://cdn.worldvectorlogo.com/logos/ge-monogram.svg", url: "https://www.ge.com" },
-  { name: "Hisense", logo: "https://cdn.worldvectorlogo.com/logos/hisense.svg", url: "https://www.hisense.com" },
+  { name: "Hisense", logo: "https://upload.wikimedia.org/wikipedia/commons/4/47/Hisense.svg", url: "https://www.hisense.com" },
 ]
 
 export default function Brands() {
