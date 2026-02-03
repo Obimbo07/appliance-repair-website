@@ -137,6 +137,12 @@ export default function Header() {
                   >
                     Repair
                   </Link>
+                  <Link 
+                    href="/services/solar"
+                    className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  >
+                    Solar Systems
+                  </Link>
                 </div>
               </div>
               <Link href="/about" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
@@ -224,6 +230,13 @@ export default function Header() {
                   onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
                 >
                   Repair
+                </Link>
+                <Link 
+                  href="/services/solar" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Solar Systems
                 </Link>
                 <Link 
                   href="/services" 
