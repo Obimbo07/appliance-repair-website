@@ -94,8 +94,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-stretch">
             {/* Logo - Creates L-shape effect */}
-            <Link href="/" className="relative flex items-center -mt-8 mr-12 hover:opacity-90 transition-all duration-300">
-              <div className="bg-white p-3 shadow-lg">
+            <Link href="/" className="relative flex items-center -mt-8 -ml-4 hover:opacity-90 transition-all duration-300">
+              <div className="bg-white p-2 shadow-lg">
                 <Image 
                   src="/logo2.png" 
                   alt="Applicare Logo" 
