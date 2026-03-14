@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { X, Wrench, Settings, Loader2 } from 'lucide-react'
+import { calculateDepositAmount, formatKes, pricedServices } from '@/lib/service-pricing'
 
 interface BookServiceModalProps {
   isOpen: boolean
@@ -11,10 +12,13 @@ interface BookServiceModalProps {
 export default function BookServiceModal({ isOpen, onClose }: BookServiceModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+  const [paymentMessage, setPaymentMessage] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    serviceId: '',
     serviceType: '' as 'repair' | 'maintenance' | '',
     maintenanceFrequency: '' as 'one-time' | 'recurring' | '',
     recurringSchedule: '',
@@ -36,89 +40,100 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
       // Reset recurring schedule if frequency changes
       ...(name === 'maintenanceFrequency' && value !== 'recurring' ? { recurringSchedule: '' } : {}),
     }))
+
+    if (submitError) {
+      setSubmitError('')
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitError('')
+    setPaymentMessage('')
 
-    // Build email content
-    const serviceTypeLabel = formData.serviceType === 'repair' ? 'Repair' : 'Maintenance'
-    const maintenanceDetails = formData.serviceType === 'maintenance' 
-      ? `\nMaintenance Type: ${formData.maintenanceFrequency === 'one-time' ? 'One-Time' : 'Recurring'}${formData.maintenanceFrequency === 'recurring' ? `\nSchedule: ${formData.recurringSchedule}` : ''}`
-      : ''
+    try {
+      const selectedService = pricedServices.find((service) => service.id === formData.serviceId)
 
-    const emailBody = `New Service Booking Request
+      if (!selectedService) {
+        throw new Error('Please select a service before paying.')
+      }
 
-SERVICE DETAILS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Service Type: ${serviceTypeLabel}${maintenanceDetails}
-Appliance: ${formData.appliance}
-Brand: ${formData.brand || 'Not specified'}
-
-CUSTOMER INFORMATION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Name: ${formData.name}
-Email: ${formData.email || 'Not provided'}
-Phone: ${formData.phone}
-Address: ${formData.address}
-
-SCHEDULING
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Preferred Date: ${formData.preferredDate}
-Preferred Time: ${formData.preferredTime || 'Flexible'}
-
-${formData.serviceType === 'repair' ? 'ISSUE DESCRIPTION' : 'SERVICE NOTES'}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-${formData.issue || 'No additional details provided'}`
-
-    const subject = `[${serviceTypeLabel.toUpperCase()}] ${formData.appliance} - ${formData.name}`
-
-    // Option 1: Send via mailto (opens email client)
-    const mailtoLink = `mailto:information@applicare.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
-    
-    // Option 2: Also offer WhatsApp as backup
-    const whatsappMessage = `*New ${serviceTypeLabel} Booking*\n\n` +
-      `*Name:* ${formData.name}\n` +
-      `*Phone:* ${formData.phone}\n` +
-      `*Email:* ${formData.email || 'Not provided'}\n` +
-      `*Appliance:* ${formData.appliance}\n` +
-      `*Brand:* ${formData.brand || 'Not specified'}\n` +
-      `*Service:* ${serviceTypeLabel}${maintenanceDetails.replace(/\n/g, '\n*')}\n` +
-      `*Date:* ${formData.preferredDate}\n` +
-      `*Time:* ${formData.preferredTime || 'Flexible'}\n` +
-      `*Address:* ${formData.address}\n` +
-      `*Details:* ${formData.issue || 'None'}`
-
-    // Simulate submission delay for better UX
-    await new Promise(resolve => setTimeout(resolve, 500))
-    
-    // Open email client
-    window.location.href = mailtoLink
-    
-    setIsSubmitting(false)
-    setSubmitSuccess(true)
-    
-    // Reset after showing success
-    setTimeout(() => {
-      setSubmitSuccess(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        serviceType: '',
-        maintenanceFrequency: '',
-        recurringSchedule: '',
-        appliance: '',
-        brand: '',
-        issue: '',
-        preferredDate: '',
-        preferredTime: '',
-        address: '',
+      const response = await fetch('/api/paystack/initialize', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          phone: formData.phone,
+          serviceId: formData.serviceId,
+          customerName: formData.name,
+          customerEmail: formData.email,
+          serviceType: formData.serviceType,
+          appliance: formData.appliance,
+          brand: formData.brand,
+          issue: formData.issue,
+          address: formData.address,
+          preferredDate: formData.preferredDate,
+          preferredTime: formData.preferredTime,
+        }),
       })
-      onClose()
-    }, 2000)
+
+      const payload = await response.json() as {
+        message?: string
+        emailNotificationWarning?: string
+        authorizationUrl?: string
+      }
+
+      if (!response.ok) {
+        throw new Error(payload.message || 'Unable to initialize Paystack payment')
+      }
+
+      if (!payload.authorizationUrl) {
+        throw new Error('Paystack authorization link was not returned')
+      }
+
+      const baseMessage = payload.message || 'Redirecting you to Paystack to complete payment.'
+      const warningMessage = payload.emailNotificationWarning
+        ? ` Booking submitted, but email notification had an issue: ${payload.emailNotificationWarning}`
+        : ''
+      setPaymentMessage(`${baseMessage}${warningMessage}`)
+      setIsSubmitting(false)
+      setSubmitSuccess(true)
+
+      setTimeout(() => {
+        window.location.href = payload.authorizationUrl as string
+      }, 600)
+
+      setTimeout(() => {
+        setSubmitSuccess(false)
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          serviceId: '',
+          serviceType: '',
+          maintenanceFrequency: '',
+          recurringSchedule: '',
+          appliance: '',
+          brand: '',
+          issue: '',
+          preferredDate: '',
+          preferredTime: '',
+          address: '',
+        })
+        onClose()
+      }, 2500)
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Payment initialization failed'
+      setSubmitError(message)
+      setIsSubmitting(false)
+    }
   }
+
+  const selectedService = pricedServices.find((service) => service.id === formData.serviceId)
+  const totalCost = selectedService?.priceKes ?? 0
+  const depositCost = calculateDepositAmount(totalCost)
 
   if (!isOpen) return null
 
@@ -274,12 +289,39 @@ ${formData.issue || 'No additional details provided'}`
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Service With Pricing *</label>
+              <select
+                name="serviceId"
+                value={formData.serviceId}
+                onChange={handleChange}
+                required
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              >
+                <option value="">Select Service</option>
+                {pricedServices.map((service) => (
+                  <option key={service.id} value={service.id}>
+                    {service.name} - {formatKes(service.priceKes)}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {selectedService && (
+              <div className="rounded-md bg-orange-50 border border-orange-200 p-3 text-sm text-gray-800">
+                <p className="font-semibold">Pricing Summary</p>
+                <p>Total service cost: {formatKes(totalCost)}</p>
+                <p>Required deposit (20%): <span className="font-bold text-orange-700">{formatKes(depositCost)}</span></p>
+              </div>
+            )}
+
+            <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="john@example.com"
               />
@@ -397,23 +439,37 @@ ${formData.issue || 'No additional details provided'}`
             </div>
 
             <div className="pt-4 space-y-3">
+              {submitError && (
+                <div className="text-sm rounded-md bg-red-50 border border-red-200 text-red-700 px-3 py-2">
+                  {submitError}
+                </div>
+              )}
+
               <button
                 type="submit"
-                disabled={isSubmitting || !formData.serviceType || (formData.serviceType === 'maintenance' && !formData.maintenanceFrequency)}
+                disabled={
+                  isSubmitting ||
+                  !formData.serviceType ||
+                  !formData.serviceId ||
+                  (formData.serviceType === 'maintenance' && !formData.maintenanceFrequency)
+                }
                 className="w-full bg-orange-500 text-white py-3 px-6 font-bold rounded-md hover:bg-orange-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    Sending...
+                    Initializing Paystack...
                   </>
                 ) : (
-                  'Submit Booking Request'
+                  selectedService ? `Pay 20% Deposit (${formatKes(depositCost)})` : 'Pay 20% Deposit'
                 )}
               </button>
               <p className="text-xs text-gray-500 text-center">
-                Your request will be sent to information@applicare.co.ke
+                You will be redirected to Paystack to complete payment securely.
               </p>
+              {paymentMessage && (
+                <p className="text-xs text-green-600 text-center">{paymentMessage}</p>
+              )}
             </div>
           </form>
         )}

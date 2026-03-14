@@ -28,3 +28,19 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+
+## Paystack Deposit Setup
+
+This project uses Paystack for collecting a 20% service deposit during booking.
+
+1. Set `PAYSTACK_SECRET_KEY` in your environment.
+2. Set `PAYSTACK_CALLBACK_URL` to your callback URL (recommended: `https://<your-domain>/api/paystack/callback`).
+3. Configure SMTP vars in `.env.example` so admin and customer email notifications are sent.
+
+### Payment Endpoints
+
+- Initialize Paystack transaction: `POST /api/paystack/initialize`
+- Verify transaction by reference: `GET /api/paystack/verify?reference=...`
+- Paystack callback redirect handler: `GET /api/paystack/callback?reference=...`
+
+After callback verification, users are redirected to `GET /payment-status` with payment status query params.
