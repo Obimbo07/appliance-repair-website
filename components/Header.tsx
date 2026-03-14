@@ -136,6 +136,12 @@ export default function Header() {
                   >
                     Repair
                   </button>
+                  <Link
+                    href="/hire-equipments"
+                    className="block w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  >
+                    Equipment Hire
+                  </Link>
                 </div>
               </div>
               <Link href="/about" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
@@ -155,6 +161,9 @@ export default function Header() {
               </Link>
               <Link href="/training" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
                 Training
+              </Link>
+              <Link href="/hire-equipments" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
+                Hire Equipments
               </Link>
               <Link href="/contact" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
                 Contact
@@ -199,6 +208,7 @@ export default function Header() {
           <Link href="/blog" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link href="/careers" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Careers</Link>
           <Link href="/training" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Training</Link>
+          <Link href="/hire-equipments" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Hire Equipments</Link>
           <Link href="/contact" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Contact</Link>
           
           {/* Social Links - Mobile */}
