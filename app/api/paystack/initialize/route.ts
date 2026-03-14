@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { calculateDepositAmount, pricedServices } from '@/lib/service-pricing'
-import { sendBookingEmails } from '@/lib/email'
 
 export const runtime = 'edge'
 
@@ -102,34 +101,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    let emailNotificationWarning = ''
-
-    try {
-      await sendBookingEmails({
-        customerName: body.customerName,
-        customerEmail: body.customerEmail,
-        customerPhone: body.phone,
-        serviceName: service.name,
-        serviceType: body.serviceType,
-        appliance: body.appliance,
-        brand: body.brand,
-        issue: body.issue,
-        address: body.address,
-        preferredDate: body.preferredDate,
-        preferredTime: body.preferredTime,
-        amountKes,
-        paymentProvider: 'paystack',
-      })
-    } catch (error) {
-      emailNotificationWarning = error instanceof Error ? error.message : 'Failed to send booking emails'
-    }
-
     return NextResponse.json({
       authorizationUrl: initData.data.authorization_url,
       reference: initData.data.reference,
       amountKes,
       service: service.name,
-      emailNotificationWarning: emailNotificationWarning || undefined,
     })
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unexpected server error'
