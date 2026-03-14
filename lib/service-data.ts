@@ -262,6 +262,31 @@ export const services: Service[] = [
       'Want to reduce carbon footprint',
       'Business continuity requirements'
     ]
+  },
+  {
+    slug: 'appliance-equipment-hire',
+    icon: Wrench,
+    title: 'Appliance Equipment Hire',
+    description: 'Hire professional appliance repair tools and test equipment for short-term jobs, diagnostics, and field work.',
+    fullDescription: 'Need specialized tools for appliance diagnostics or installation? We offer reliable equipment hire options for technicians, training teams, and maintenance crews. All tools are checked before handover and can be hired on daily or weekly terms.',
+    features: [
+      'Daily and weekly hire plans',
+      'Well-maintained and tested equipment',
+      'Flexible pickup and return options',
+      'Suitable for technicians and training labs',
+      'Bulk hire available for teams',
+      'Clear rental terms and support'
+    ],
+    commonIssues: [
+      'Need tools for short-term repair work',
+      'Cannot justify buying expensive diagnostic tools',
+      'Emergency replacement for faulty workshop equipment',
+      'Temporary equipment needed for site projects',
+      'Training workshop requires extra tool sets',
+      'Need calibrated meters for testing',
+      'Busy season requires additional gear',
+      'Looking for cost-effective equipment access'
+    ]
   }
 ]
 
