@@ -151,53 +151,53 @@ export default function Hero() {
         </div>
 
         {/* Right - Booking Form */}
-        <div className="bg-black/90 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-2xl w-full animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
-          <h2 className="text-white text-2xl font-bold mb-2">Request Your Services</h2>
-          <p className="text-gray-300 text-sm mb-6">Schedule your home appliance repair online – 24/7 availability</p>
+        <div className="bg-black/90 backdrop-blur-sm p-4 md:p-6 rounded-lg shadow-2xl w-full animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
+          <h2 className="text-white text-xl font-bold mb-1">Request Your Services</h2>
+          <p className="text-gray-300 text-xs mb-4">Schedule your home appliance repair online – 24/7 availability</p>
           
-          <form className="space-y-4">
+          <form className="space-y-3">
             <input 
               type="text" 
               placeholder="Your Name" 
-              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+              className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <input 
                 type="tel" 
                 placeholder="Phone" 
-                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
               <input 
                 type="email" 
                 placeholder="Email" 
-                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <input 
               type="text" 
               placeholder="Address" 
-              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+              className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
             <input 
               type="text" 
               placeholder="ZIP Code" 
-              className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+              className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <input 
                 type="date" 
                 placeholder="Date of Visit" 
-                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
               <input 
                 type="time" 
                 placeholder="Time of Visit" 
-                className="w-full px-4 py-3 rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <button 
               type="submit" 
-              className="w-full bg-orange-500 text-white py-3 font-bold hover:bg-orange-600 rounded transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+              className="w-full bg-orange-500 text-white py-2.5 text-sm font-bold hover:bg-orange-600 rounded transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
             >
               Schedule Your Booking
             </button>

@@ -39,6 +39,7 @@ const TikTokIcon = () => (
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const { openBooking } = useBooking()
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -93,8 +94,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-stretch">
             {/* Logo - Creates L-shape effect */}
-            <Link href="/" className="relative flex items-center -mt-8 mr-12 hover:opacity-90 transition-all duration-300">
-              <div className="bg-white p-3 shadow-lg">
+            <Link href="/" className="relative flex items-center -mt-8 -ml-4 hover:opacity-90 transition-all duration-300">
+              <div className="bg-white p-2 shadow-lg">
                 <Image 
                   src="/logo2.png" 
                   alt="Applicare Logo" 
@@ -118,21 +119,21 @@ export default function Header() {
                 </Link>
                 {/* Services Dropdown */}
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-gray-100">
-                  <button 
-                    onClick={openBooking}
-                    className="w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  <Link 
+                    href="/services/consultancy"
+                    className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
                   >
                     Consultancy
-                  </button>
-                  <button 
-                    onClick={openBooking}
-                    className="w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  </Link>
+                  <Link 
+                    href="/services/maintenance"
+                    className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
                   >
                     Maintenance
-                  </button>
-                  <button 
-                    onClick={openBooking}
-                    className="w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
+                  </Link>
+                  <Link 
+                    href="/services/repair"
+                    className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
                   >
                     Repair
                   </button>
@@ -200,9 +201,58 @@ export default function Header() {
       }`}>
         <nav className="flex flex-col gap-4 p-4 text-gray-700">
           <Link href="/" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/services" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Services</Link>
+          
+          {/* Services with Dropdown */}
+          <div className="flex flex-col">
+            <button 
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              className="flex items-center justify-between hover:text-purple-600 font-semibold transition-colors duration-300 text-left"
+            >
+              <span>Services</span>
+              <ChevronDown size={18} className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? 'max-h-48 mt-2' : 'max-h-0'}`}>
+              <div className="flex flex-col gap-2 pl-4 border-l-2 border-purple-200">
+                <Link 
+                  href="/services/consultancy" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Consultancy
+                </Link>
+                <Link 
+                  href="/services/maintenance" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Maintenance
+                </Link>
+                <Link 
+                  href="/services/repair" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Repair
+                </Link>
+                <Link 
+                  href="/services/solar" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Solar Systems
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 font-medium" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  View All Services
+                </Link>
+              </div>
+            </div>
+          </div>
+          
           <Link href="/about" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>About</Link>
-          <Link href="/services" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Service Areas</Link>
           <Link href="/projects" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Projects</Link>
           <Link href="/about#testimonials" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Reviews</Link>
           <Link href="/blog" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Blog</Link>
