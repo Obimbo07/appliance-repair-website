@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+export const runtime = 'edge'
+
 type SearchParams = {
   status?: string
   reference?: string

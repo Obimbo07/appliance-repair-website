@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { calculateDepositAmount, pricedServices } from '@/lib/service-pricing'
 import { sendBookingEmails } from '@/lib/email'
 
+export const runtime = 'edge'
+
 interface InitializePaymentBody {
   serviceId: string
   customerName: string

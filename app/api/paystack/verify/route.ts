@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+export const runtime = 'edge'
+
 function getPaystackSecretKey(): string {
   const secretKey = process.env.PAYSTACK_SECRET_KEY
 
