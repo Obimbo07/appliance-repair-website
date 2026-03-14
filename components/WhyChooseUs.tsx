@@ -30,7 +30,7 @@ const reasons = [
   }
 ]
 
-export default function WhyChooseUs() {
+export function WhyChooseUs() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -89,11 +89,11 @@ export default function WhyChooseUs() {
 
           {/* Right - Image */}
           <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="relative group">
+            <div className="relative group aspect-[4/3] overflow-hidden rounded-lg">
               <img 
                 src="/image1.jpeg?w=600&h=400&fit=crop" 
                 alt="Technician"
-                className="rounded-lg w-full shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]"
+                className="w-full h-full object-cover shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -120,3 +120,5 @@ export default function WhyChooseUs() {
     </section>
   )
 }
+
+export default WhyChooseUs

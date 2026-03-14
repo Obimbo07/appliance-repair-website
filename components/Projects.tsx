@@ -48,7 +48,7 @@ export default function Projects() {
               <img 
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform"
+                className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform"
               />
               {idx === 2 && (
                 <div className="absolute inset-0 bg-yellow-400 opacity-40 flex items-center justify-center">

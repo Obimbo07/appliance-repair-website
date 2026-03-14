@@ -55,7 +55,7 @@ export default function BlogPostContent({ post, relatedPosts }: BlogPostContentP
       <Header />
       
       {/* Hero Image */}
-      <div className="relative h-[400px] md:h-[500px]">
+      <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={post.image}
           alt={post.title}
@@ -164,7 +164,7 @@ export default function BlogPostContent({ post, relatedPosts }: BlogPostContentP
                   href={`/blog/${relatedPost.slug}`}
                   className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <img
                       src={relatedPost.image}
                       alt={relatedPost.title}

@@ -123,11 +123,11 @@ export default function Stats() {
         {/* Testimonials Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
-          <div className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`relative aspect-[4/3] overflow-hidden rounded-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <img 
               src="/image3.jpeg" 
               alt="Customer testimonial"
-              className="rounded-lg w-full shadow-xl hover:shadow-2xl transition-shadow duration-500"
+              className="w-full h-full object-cover shadow-xl hover:shadow-2xl transition-shadow duration-500"
             />
             <div className="absolute -bottom-6 -right-6 bg-white px-6 py-4 rounded-lg shadow-lg animate-float">
               <h3 className="text-3xl font-bold text-blue-600">{counters[0]}+</h3>
