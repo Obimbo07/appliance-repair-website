@@ -80,7 +80,7 @@ export default function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                 >
-                  <div className="relative h-72">
+                  <div className="relative aspect-[4/3]">
                     <img
                       src={post.image}
                       alt={post.title}
@@ -145,7 +145,7 @@ export default function BlogPage() {
                   className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
                 >
                   <Link href={`/blog/${post.slug}`}>
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={post.image}
                         alt={post.title}

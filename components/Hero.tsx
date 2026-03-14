@@ -57,7 +57,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-screen md:h-screen flex items-center pt-20 md:pt-0 overflow-hidden transition-all duration-700"
+      className="relative min-h-[62vh] md:h-[70vh] flex items-center pt-20 md:pt-0 overflow-hidden transition-all duration-700"
     >
       {/* Video or Image Background */}
       {slide.video ? (

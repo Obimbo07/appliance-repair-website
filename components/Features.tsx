@@ -63,13 +63,13 @@ export default function Features() {
               Don't let a malfunctioning appliance disrupt your life. AppliCare is here to provide comprehensive repair solutions for all major brands and models. We offer transparent pricing, convenient online booking, and a satisfaction guarantee, so you can have peace of mind knowing your appliances are in good hands.
             </p>
             <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="relative mt-8 group">
+              <div className="relative mt-8 group aspect-[4/3] overflow-hidden rounded-lg">
                 <Image 
                   src={'/image5.jpeg'} 
                   alt="Appliance Repair" 
-                  width={600} 
-                  height={400} 
-                  className="rounded-lg shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]" 
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>

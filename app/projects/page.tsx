@@ -130,7 +130,7 @@ export default function ProjectsPage() {
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 hover-lift group animate-fadeInUp"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
