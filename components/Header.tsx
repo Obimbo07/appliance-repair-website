@@ -136,7 +136,7 @@ export default function Header() {
                     className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
                   >
                     Repair
-                  </button>
+                  </Link>
                   <Link
                     href="/hire-equipments"
                     className="block w-full text-left px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 font-medium transition-colors duration-300"
