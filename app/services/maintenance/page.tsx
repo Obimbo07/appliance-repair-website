@@ -194,13 +194,13 @@ export default function MaintenancePage() {
                 </button>
                 <div className="mt-6 pt-6 border-t border-orange-400">
                   <p className="text-sm text-orange-100 mb-3">Questions about our plans?</p>
-                  <a href="tel:0716029811" className="flex items-center gap-3 text-white hover:text-orange-100 transition-colors">
+                  <a href="tel:0704118177" className="flex items-center gap-3 text-white hover:text-orange-100 transition-colors">
                     <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
                       <p className="text-sm text-orange-100">Call us now</p>
-                      <p className="font-bold text-lg">(0716) 029 811</p>
+                      <p className="font-bold text-lg">(0704) 118 177</p>
                     </div>
                   </a>
                 </div>

@@ -243,11 +243,11 @@ export default function SolarPage() {
                   Request Free Quote
                 </button>
                 <a 
-                  href="tel:0716029811"
+                  href="tel:0704118177"
                   className="flex items-center justify-center gap-2 w-full bg-orange-700 text-white py-3 font-bold rounded hover:bg-orange-800 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
-                  Call: 0716 029 811
+                  Call: 0704 118 177
                 </a>
                 <div className="mt-4 pt-4 border-t border-orange-400">
                   <p className="text-sm text-orange-100 mb-2">📍 Available in:</p>

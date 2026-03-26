@@ -8,23 +8,30 @@ export default function DiscountPopup() {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const popupStorageKey = 'discountPopupDismissedAt_v2'
 
   useEffect(() => {
-    // Check if popup was already dismissed in this session
-    const dismissed = sessionStorage.getItem('discountPopupDismissed')
-    if (dismissed) return
+    // Show once per 12 hours unless user has not dismissed it.
+    const dismissedAt = window.localStorage.getItem(popupStorageKey)
+    if (dismissedAt) {
+      const elapsedMs = Date.now() - Number(dismissedAt)
+      const twelveHoursMs = 12 * 60 * 60 * 1000
+      if (!Number.isNaN(elapsedMs) && elapsedMs < twelveHoursMs) {
+        return
+      }
+    }
 
-    // Show popup after 2 seconds
+    // Show popup after a short delay.
     const timer = setTimeout(() => {
       setIsVisible(true)
-    }, 3000)
+    }, 1800)
 
     return () => clearTimeout(timer)
   }, [])
 
   const handleClose = () => {
     setIsVisible(false)
-    sessionStorage.setItem('discountPopupDismissed', 'true')
+    window.localStorage.setItem(popupStorageKey, String(Date.now()))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {

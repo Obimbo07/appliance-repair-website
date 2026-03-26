@@ -94,7 +94,7 @@ export default function RootLayout({
     name: 'Applicare',
     description: 'Professional appliance repair services in Kenya',
     url: 'https://applicare.co.ke',
-    telephone: '+254716029811',
+    telephone: '+254704118177',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Nairobi',

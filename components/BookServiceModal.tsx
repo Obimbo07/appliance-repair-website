@@ -283,7 +283,7 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  placeholder="0716 029 811"
+                  placeholder="0704 118 177"
                 />
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { Briefcase } from 'lucide-react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { services } from '@/lib/service-data'
@@ -52,6 +53,20 @@ export default function ServicesPage() {
                 </span>
               </Link>
             ))}
+            <Link
+              href="/hire-equipments"
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-500 border-t-4 border-orange-500 hover-lift group animate-fadeInUp cursor-pointer"
+              style={{ animationDelay: `${services.length * 100}ms` }}
+            >
+              <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-orange-200 transition-all duration-300">
+                <Briefcase className="w-7 h-7 text-orange-500" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">Hire Equipments</h3>
+              <p className="text-gray-600 leading-relaxed mb-4">Explore our equipment hire options for events, projects, and temporary appliance needs.</p>
+              <span className="text-orange-500 font-semibold text-sm group-hover:text-orange-600">
+                View Hire Equipments →
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -74,10 +89,10 @@ export default function ServicesPage() {
               WhatsApp Us
             </a>
             <a 
-              href="tel:0716029811"
+              href="tel:0704118177"
               className="bg-white text-orange-500 px-8 py-3 font-bold rounded hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              Call 0716 029 811
+              Call 0704 118 177
             </a>
           </div>
         </div>
