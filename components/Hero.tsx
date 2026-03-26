@@ -57,7 +57,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[62vh] md:h-[70vh] flex items-center pt-20 md:pt-0 overflow-hidden transition-all duration-700"
+      className="relative min-h-[62vh] md:h-[70vh] flex items-center pt-20 md:pt-10 lg:pt-6 overflow-hidden transition-all duration-700"
     >
       {/* Video or Image Background */}
       {slide.video ? (
@@ -151,7 +151,7 @@ export default function Hero() {
         </div>
 
         {/* Right - Booking Form */}
-        <div className="bg-black/90 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-2xl w-full max-w-sm md:max-w-md lg:max-w-[440px] lg:ml-auto animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
+        <div className="bg-black/90 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-2xl w-full max-w-sm md:max-w-md lg:max-w-[440px] lg:ml-auto lg:mt-6 animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
           <h2 className="text-white text-lg md:text-xl font-bold mb-1">Request Your Services</h2>
           <p className="text-gray-300 text-[11px] md:text-xs mb-2">Schedule your home appliance repair online – 24/7 availability</p>
           

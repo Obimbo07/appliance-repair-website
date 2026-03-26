@@ -39,9 +39,29 @@ export default function BlogPage() {
 
   // Show first 4 posts as featured
   const featuredPosts = blogPosts.slice(0, 4)
+  const blogCollectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Applicare Blog',
+    description: 'Appliance repair tips, guides and troubleshooting articles for homes in Kenya.',
+    url: 'https://applicare.co.ke/blog',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: blogPosts.slice(0, 12).map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://applicare.co.ke/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  }
 
   return (
     <main className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionJsonLd) }}
+      />
       <Header />
       
       {/* Hero Section */}

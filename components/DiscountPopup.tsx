@@ -63,13 +63,13 @@ Please send them their discount code.`
   if (!isVisible) return null
 
   return (
-    <div className="fixed left-0 bottom-4 z-50 animate-slideInLeft">
+    <div className="fixed left-0 bottom-3 z-50 animate-slideInLeft">
       {/* Main Popup */}
-      <div className="relative bg-gradient-to-b from-amber-400 to-orange-500 rounded-r-2xl shadow-2xl w-[320px] overflow-hidden">
+      <div className="relative bg-gradient-to-b from-amber-400 to-orange-500 rounded-r-2xl shadow-2xl w-[280px] md:w-[296px] overflow-hidden">
         {/* Decorative circles on right edge */}
-        <div className="absolute right-0 top-0 bottom-0 w-3 flex flex-col justify-around py-4">
+        <div className="absolute right-0 top-0 bottom-0 w-2.5 flex flex-col justify-around py-3">
           {[...Array(12)].map((_, i) => (
-            <div key={i} className="w-3 h-3 bg-gray-900 rounded-full -mr-1.5" />
+            <div key={i} className="w-2.5 h-2.5 bg-gray-900 rounded-full -mr-1" />
           ))}
         </div>
 
@@ -83,42 +83,42 @@ Please send them their discount code.`
         </button>
 
         {/* Content */}
-        <div className="p-6 pl-8">
+        <div className="p-4 pl-6">
           {!isSubmitted ? (
             <>
               {/* Icon and Offer */}
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <Percent className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-2 mb-1">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <Percent className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-white">20% OFF</h3>
-                  <p className="text-white/90 text-sm">Limited Time Offer</p>
+                  <h3 className="text-2xl font-bold text-white">20% OFF</h3>
+                  <p className="text-white/90 text-xs">Limited Time Offer</p>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-white font-medium mb-4 mt-4">
+              <p className="text-white text-sm font-medium mb-3 mt-3">
                 Get 20% off your first repair!
               </p>
 
               {/* Email Form */}
-              <form onSubmit={handleSubmit} className="space-y-3">
+              <form onSubmit={handleSubmit} className="space-y-2">
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     required
-                    className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:bg-white transition-all duration-300"
+                    className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-white/90 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:bg-white transition-all duration-300"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-white text-amber-600 font-bold py-3 rounded-lg hover:bg-amber-50 hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full bg-white text-amber-600 font-bold py-2.5 text-sm rounded-lg hover:bg-amber-50 hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     'Sending...'
@@ -132,7 +132,7 @@ Please send them their discount code.`
               </form>
 
               {/* Terms */}
-              <p className="text-white/70 text-xs text-center mt-3">
+              <p className="text-white/70 text-[11px] text-center mt-2">
                 Valid for new customers only. T&Cs apply.
               </p>
             </>

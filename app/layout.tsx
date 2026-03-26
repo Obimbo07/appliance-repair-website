@@ -10,6 +10,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://applicare.co.ke'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: 'Applicare - Professional Appliance Repair Services in Kenya | Nairobi, Nakuru',
     template: '%s | Applicare - Appliance Repair Kenya'
@@ -77,8 +80,12 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
   icons: {
-    icon: '/logo2.png',
-    shortcut: '/logo2.png',
+    icon: [
+      { url: '/icon-light-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-dark-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon-light-32x32.png',
     apple: '/apple-icon.png',
   },
 }

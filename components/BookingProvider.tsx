@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react'
 import BookServiceModal from './BookServiceModal'
 import DiscountPopup from './DiscountPopup'
+import WhatsAppSideButton from './WhatsAppSideButton'
 
 interface BookingContextType {
   openBooking: () => void
@@ -29,6 +30,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
   return (
     <BookingContext.Provider value={{ openBooking, closeBooking, isBookingOpen }}>
       {children}
+      <WhatsAppSideButton />
       <BookServiceModal isOpen={isBookingOpen} onClose={closeBooking} />
       <DiscountPopup />
     </BookingContext.Provider>

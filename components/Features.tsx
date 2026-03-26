@@ -63,7 +63,7 @@ export default function Features() {
               Don't let a malfunctioning appliance disrupt your life. AppliCare is here to provide comprehensive repair solutions for all major brands and models. We offer transparent pricing, convenient online booking, and a satisfaction guarantee, so you can have peace of mind knowing your appliances are in good hands.
             </p>
             <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="relative mt-6 lg:mt-auto group aspect-[3/2] w-full max-w-[620px] overflow-hidden rounded-lg">
+              <div className="relative mt-6 group aspect-[3/2] w-full max-w-[620px] overflow-hidden rounded-lg">
                 <Image 
                   src={'/image5.jpeg'} 
                   alt="Appliance Repair" 
@@ -95,7 +95,7 @@ export default function Features() {
             </div>
 
             {/* CTA Section */}
-            <div className={`flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start mt-8 md:mt-10 pt-6 md:pt-8 border-t border-amber-200 transition-all duration-700 lg:mt-auto lg:mb-0 ${
+            <div className={`flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start mt-6 md:mt-7 pt-5 md:pt-6 border-t border-amber-200 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             style={{ transitionDelay: '800ms' }}
