@@ -77,7 +77,7 @@ export default function Features() {
           </div>
 
           {/* Right Features Grid */}
-          <div className={`h-full bg-amber-50 p-8 md:p-10 rounded-lg flex flex-col transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`h-full bg-amber-50 p-8 md:p-10 lg:pb-3 rounded-lg flex flex-col transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, idx) => (
                 <div 
@@ -95,7 +95,7 @@ export default function Features() {
             </div>
 
             {/* CTA Section */}
-            <div className={`flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start mt-8 md:mt-10 pt-6 md:pt-8 border-t border-amber-200 transition-all duration-700 lg:mt-auto ${
+            <div className={`flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start mt-8 md:mt-10 pt-6 md:pt-8 border-t border-amber-200 transition-all duration-700 lg:mt-auto lg:mb-0 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             style={{ transitionDelay: '800ms' }}
