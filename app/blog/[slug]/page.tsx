@@ -39,10 +39,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-// Force static generation
-export const dynamic = 'force-static'
-export const dynamicParams = false
-
 interface PageProps {
   params: Promise<{ slug: string }>
 }
