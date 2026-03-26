@@ -1,46 +1,122 @@
 # Appliance Repair Website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Applicare website built with Next.js.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/austins-projects-7258f1a6/v0-appliance-repair-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/hB6W2Hy5Cx8)
+## Tech Stack
 
-## Overview
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Paystack API (deposits)
+- Nodemailer (email notifications)
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## 1. Clone the Project
 
-## Deployment
+Use HTTPS:
 
-Your project is live at:
+```bash
+git clone https://github.com/Obimbo07/appliance-repair-website.git
+cd appliance-repair-website
+```
 
-**[https://vercel.com/austins-projects-7258f1a6/v0-appliance-repair-website](https://vercel.com/austins-projects-7258f1a6/v0-appliance-repair-website)**
+Or use SSH:
 
-## Build your app
+```bash
+git clone git@github.com:Obimbo07/appliance-repair-website.git
+cd appliance-repair-website
+```
 
-Continue building your app on:
+## 2. Install Dependencies
 
-**[https://v0.app/chat/hB6W2Hy5Cx8](https://v0.app/chat/hB6W2Hy5Cx8)**
+This repo includes `pnpm-lock.yaml`, so `pnpm` is recommended.
 
-## How It Works
+```bash
+pnpm install
+```
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+If you do not use pnpm:
 
-## Paystack Deposit Setup
+```bash
+npm install
+```
 
-This project uses Paystack for collecting a 20% service deposit during booking.
+## 3. Create Environment Variables
 
-1. Set `PAYSTACK_SECRET_KEY` in your environment.
-2. Set `PAYSTACK_CALLBACK_URL` to your callback URL (recommended: `https://<your-domain>/api/paystack/callback`).
-3. Configure SMTP vars in `.env.example` so admin and customer email notifications are sent.
+Create a `.env.local` file in the project root and add:
 
-### Payment Endpoints
+```env
+# Paystack
+PAYSTACK_SECRET_KEY=your_paystack_secret_key
+PAYSTACK_CALLBACK_URL=http://localhost:3000/api/paystack/callback
 
-- Initialize Paystack transaction: `POST /api/paystack/initialize`
-- Verify transaction by reference: `GET /api/paystack/verify?reference=...`
-- Paystack callback redirect handler: `GET /api/paystack/callback?reference=...`
+# SMTP (Email)
+SMTP_HOST=your_smtp_host
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your_smtp_user
+SMTP_PASS=your_smtp_password
+SMTP_FROM="Applicare <no-reply@yourdomain.com>"
+ADMIN_NOTIFICATION_EMAIL=your_admin_email@example.com
+```
 
-After callback verification, users are redirected to `GET /payment-status` with payment status query params.
+Notes:
+- `PAYSTACK_SECRET_KEY` is required for payment initialization and verification.
+- If `PAYSTACK_CALLBACK_URL` is not set, the app falls back to your current origin.
+- SMTP values are required for booking notification emails.
+
+## 4. Run the Project Locally
+
+```bash
+pnpm dev
+```
+
+Open:
+
+`http://localhost:3000`
+
+## 5. Build for Production
+
+```bash
+pnpm build
+pnpm start
+```
+
+## 6. Lint
+
+```bash
+pnpm lint
+```
+
+## Available Scripts
+
+- `pnpm dev` - start development server
+- `pnpm build` - create production build
+- `pnpm start` - run production server
+- `pnpm lint` - run ESLint
+
+## Paystack Endpoints
+
+- `POST /api/paystack/initialize`
+- `GET /api/paystack/verify?reference=...`
+- `GET /api/paystack/callback?reference=...`
+
+After callback verification, users are redirected to:
+
+- `GET /payment-status`
+
+## Project Structure (High Level)
+
+- `app/` - routes and API handlers
+- `components/` - reusable UI sections
+- `lib/` - shared data and backend utilities
+- `public/` - static assets
+
+## Deploy
+
+You can deploy on Vercel or any platform that supports Next.js.
+
+For Vercel:
+1. Import the GitHub repository.
+2. Add the same environment variables from `.env.local` to Vercel project settings.
+3. Deploy.

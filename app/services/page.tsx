@@ -7,7 +7,7 @@ import { services } from '@/lib/service-data'
 
 export const metadata: Metadata = {
   title: 'Appliance Repair Services in Kenya',
-  description: 'Professional appliance repair services for washing machines, refrigerators, cookers, microwaves, dishwashers & more. Fast, reliable service in Nairobi, Nakuru & surrounding areas. Call 0704 118 177.',,
+  description: 'Professional appliance repair services for washing machines, refrigerators, cookers, microwaves, dishwashers & more. Fast, reliable service in Nairobi, Nakuru & surrounding areas. Call 0704 118 177.',
   openGraph: {
     title: 'Appliance Repair Services in Kenya | Applicare',
     description: 'Professional appliance repair services for all major brands. Fast, reliable, and affordable repairs by certified technicians.',
