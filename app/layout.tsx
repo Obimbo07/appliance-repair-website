@@ -84,8 +84,8 @@ export const metadata: Metadata = {
       }
     : {}),
   icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
-    shortcut: '/icon.svg',
+    icon: [{ url: '/applicare-logo.png', type: 'image/png' }],
+    shortcut: '/applicare-logo.png',
     apple: '/applicare-logo.png',
   },
 }
