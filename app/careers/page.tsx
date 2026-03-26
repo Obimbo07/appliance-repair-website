@@ -150,7 +150,7 @@ export default function CareersPage() {
                   <h4 className="font-bold text-gray-800 mb-4">How to Apply</h4>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="https://wa.me/254716029811?text=Hi%2C%20I%27m%20interested%20in%20the%20On-Call%20Appliance%20Repair%20Technician%20position"
+                      href="https://wa.me/254704118177?text=Hi%2C%20I%27m%20interested%20in%20the%20On-Call%20Appliance%20Repair%20Technician%20position"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-green-500 text-white px-6 py-3 font-bold rounded hover:bg-green-600 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center justify-center gap-2"

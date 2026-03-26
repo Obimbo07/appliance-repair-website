@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'Applicare - Professional Appliance Repair Services in Kenya | Nairobi, Nakuru',
     template: '%s | Applicare - Appliance Repair Kenya'
   },
-  description: 'Leading appliance repair services in Kenya. Expert repair for washing machines, refrigerators, cookers, microwaves & more. Serving Nairobi, Nakuru & surrounding areas. Same-day service available. Call 0716 029 811.',
+  description: 'Leading appliance repair services in Kenya. Expert repair for washing machines, refrigerators, cookers, microwaves & more. Serving Nairobi, Nakuru & surrounding areas. Same-day service available. Call 0704 118 177.',
   keywords: [
     'appliance repair Kenya',
     'appliance repair Nairobi',

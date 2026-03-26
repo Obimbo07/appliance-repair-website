@@ -7,7 +7,7 @@ import { services } from '@/lib/service-data'
 
 export const metadata: Metadata = {
   title: 'Appliance Repair Services in Kenya',
-  description: 'Professional appliance repair services for washing machines, refrigerators, cookers, microwaves, dishwashers & more. Fast, reliable service in Nairobi, Nakuru & surrounding areas. Call 0716 029 811.',
+  description: 'Professional appliance repair services for washing machines, refrigerators, cookers, microwaves, dishwashers & more. Fast, reliable service in Nairobi, Nakuru & surrounding areas. Call 0704 118 177.',,
   openGraph: {
     title: 'Appliance Repair Services in Kenya | Applicare',
     description: 'Professional appliance repair services for all major brands. Fast, reliable, and affordable repairs by certified technicians.',
@@ -66,7 +66,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
+              href="https://wa.me/254704118177?text=Hello%20Applicare%2C%20I%20need%20appliance%20repair%20service" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-8 py-3 font-bold rounded hover:bg-green-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"

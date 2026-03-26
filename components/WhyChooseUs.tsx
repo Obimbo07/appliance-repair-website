@@ -89,7 +89,7 @@ export function WhyChooseUs() {
 
           {/* Right - Image */}
           <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="relative group aspect-[4/3] overflow-hidden rounded-lg">
+            <div className="relative group aspect-[3/2] overflow-hidden rounded-lg">
               <img 
                 src="/image1.jpeg?w=600&h=400&fit=crop" 
                 alt="Technician"

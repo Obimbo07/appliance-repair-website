@@ -42,13 +42,13 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {projects.map((project, idx) => (
             <div key={idx} className="relative rounded-lg overflow-hidden group cursor-pointer">
               <img 
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
-                className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform"
+                className="w-full aspect-[3/2] md:aspect-[4/3] object-cover group-hover:scale-105 transition-transform"
               />
               {idx === 2 && (
                 <div className="absolute inset-0 bg-yellow-400 opacity-40 flex items-center justify-center">

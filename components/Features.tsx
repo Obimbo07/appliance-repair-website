@@ -63,7 +63,7 @@ export default function Features() {
               Don't let a malfunctioning appliance disrupt your life. AppliCare is here to provide comprehensive repair solutions for all major brands and models. We offer transparent pricing, convenient online booking, and a satisfaction guarantee, so you can have peace of mind knowing your appliances are in good hands.
             </p>
             <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="relative mt-8 group aspect-[4/3] overflow-hidden rounded-lg">
+              <div className="relative mt-8 group aspect-[3/2] overflow-hidden rounded-lg">
                 <Image 
                   src={'/image5.jpeg'} 
                   alt="Appliance Repair" 
@@ -106,9 +106,9 @@ export default function Features() {
               >
                 Book Service
               </button>
-              <a href="tel:1234567890" className="flex items-center gap-2 text-gray-800 font-semibold hover:text-orange-500 transition-colors duration-300 group">
+              <a href="tel:0704118177" className="flex items-center gap-2 text-gray-800 font-semibold hover:text-orange-500 transition-colors duration-300 group">
                 <span className="group-hover:animate-pulse">📞</span>
-                (254) 716 029 811
+                (254) 704 118 177
               </a>
             </div>
           </div>

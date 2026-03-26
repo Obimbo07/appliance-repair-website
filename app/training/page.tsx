@@ -165,7 +165,7 @@ export default function TrainingPage() {
               Request Training Info
             </a>
             <a 
-              href="https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20am%20interested%20in%20your%20appliance%20repair%20training%20programs.%20Please%20provide%20more%20information."
+              href="https://wa.me/254704118177?text=Hello%20Applicare%2C%20I%20am%20interested%20in%20your%20appliance%20repair%20training%20programs.%20Please%20provide%20more%20information."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-8 py-4 font-bold rounded hover:bg-green-600 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center justify-center gap-2 text-lg"

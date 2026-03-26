@@ -78,11 +78,11 @@ export default function Header() {
               </div>
               {/* Phone Number - Hidden on small screens, visible from md */}
               <div className="h-4 w-px bg-gray-600 mx-2 hidden md:block"></div>
-              <a href="tel:0716029811" className="hidden md:flex items-center gap-2 text-white hover:text-orange-500 transition-colors duration-300">
+              <a href="tel:0704118177" className="hidden md:flex items-center gap-2 text-white hover:text-orange-500 transition-colors duration-300">
                 <div className="bg-orange-500 p-1.5 rounded">
                   <Phone size={14} />
                 </div>
-                <span className="font-semibold">(0716) 029 811</span>
+                <span className="font-semibold">(0704) 118 177</span>
               </a>
             </div>
           </div>
@@ -163,9 +163,6 @@ export default function Header() {
               <Link href="/training" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
                 Training
               </Link>
-              <Link href="/hire-equipments" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
-                Hire Equipments
-              </Link>
               <Link href="/contact" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
                 Contact
               </Link>
@@ -242,6 +239,13 @@ export default function Header() {
                   Solar Systems
                 </Link>
                 <Link 
+                  href="/hire-equipments" 
+                  className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300" 
+                  onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
+                >
+                  Equipment Hire
+                </Link>
+                <Link 
                   href="/services" 
                   className="py-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 font-medium" 
                   onClick={() => { setIsOpen(false); setMobileServicesOpen(false); }}
@@ -258,7 +262,6 @@ export default function Header() {
           <Link href="/blog" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link href="/careers" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Careers</Link>
           <Link href="/training" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Training</Link>
-          <Link href="/hire-equipments" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Hire Equipments</Link>
           <Link href="/contact" className="hover:text-purple-600 font-semibold transition-colors duration-300 hover:translate-x-2 transform" onClick={() => setIsOpen(false)}>Contact</Link>
           
           {/* Social Links - Mobile */}
@@ -282,7 +285,7 @@ export default function Header() {
             <span>0716 029 811 / 0723 585 580</span>
           </div>
           <div className="flex flex-col gap-2 pt-2 border-t border-gray-200">
-            <a href="https://wa.me/254716029811?text=Hello%20Applicare" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-4 py-2 font-bold hover:bg-green-600 text-center rounded transition-all duration-300 hover:scale-[1.02]">
+            <a href="https://wa.me/254704118177?text=Hello%20Applicare" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-4 py-2 font-bold hover:bg-green-600 text-center rounded transition-all duration-300 hover:scale-[1.02]">
               WhatsApp
             </a>
             <button 

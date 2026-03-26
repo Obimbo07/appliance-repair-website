@@ -132,25 +132,25 @@ export default function ServiceDetailPage() {
                 <div className="border-t border-gray-200 pt-6 mt-6">
                   <h4 className="font-bold text-gray-800 mb-3">Or Call Us Directly</h4>
                   <a
-                    href="tel:0716029811"
+                    href="tel:0704118177"
                     className="flex items-center justify-center gap-2 text-orange-500 hover:text-orange-600 font-semibold"
                   >
                     <Phone className="w-5 h-5" />
-                    0716 029 811
+                    0704 118 177
                   </a>
                   <a
-                    href="tel:0723585580"
+                    href="tel:0716029811"
                     className="flex items-center justify-center gap-2 text-orange-500 hover:text-orange-600 font-semibold mt-2"
                   >
                     <Phone className="w-5 h-5" />
-                    0723 585 580
+                    0716 029 811
                   </a>
                 </div>
 
                 <div className="border-t border-gray-200 pt-6 mt-6">
                   <h4 className="font-bold text-gray-800 mb-3">WhatsApp Us</h4>
                   <a
-                    href={`https://wa.me/254716029811?text=Hello%20Applicare%2C%20I%20need%20${encodeURIComponent(service.title)}%20service`}
+                    href={`https://wa.me/254704118177?text=Hello%20Applicare%2C%20I%20need%20${encodeURIComponent(service.title)}%20service`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-all duration-300"

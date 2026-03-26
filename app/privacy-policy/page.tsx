@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
                 <a className="text-orange-600 hover:text-orange-700 font-medium" href="mailto:information@applicare.co.ke">
                   information@applicare.co.ke
                 </a>{' '}
-                or call 0716 029 811.
+                or call 0704 118 177.
               </p>
             </div>
           </div>

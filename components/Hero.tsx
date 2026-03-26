@@ -143,19 +143,19 @@ export default function Hero() {
             >
               Book Service
             </button>
-            <a href="tel:0716029811" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">
+            <a href="tel:0704118177" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">
               <Phone size={20} className="animate-pulse" />
-              0716 029 811
+              0704 118 177
             </a>
           </div>
         </div>
 
         {/* Right - Booking Form */}
-        <div className="bg-black/90 backdrop-blur-sm p-4 md:p-6 rounded-lg shadow-2xl w-full animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
-          <h2 className="text-white text-xl font-bold mb-1">Request Your Services</h2>
-          <p className="text-gray-300 text-xs mb-4">Schedule your home appliance repair online – 24/7 availability</p>
+        <div className="bg-black/90 backdrop-blur-sm p-3 md:p-6 rounded-lg shadow-2xl w-full animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
+          <h2 className="text-white text-lg md:text-xl font-bold mb-1">Request Your Services</h2>
+          <p className="text-gray-300 text-xs mb-3">Schedule your home appliance repair online – 24/7 availability</p>
           
-          <form className="space-y-3">
+          <form className="space-y-2">
             <input 
               type="text" 
               placeholder="Your Name" 
@@ -176,18 +176,18 @@ export default function Hero() {
             <input 
               type="text" 
               placeholder="Address" 
-              className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+              className="w-full px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm"
             />
             <input 
               type="text" 
               placeholder="ZIP Code" 
-              className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+              className="w-full px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <input 
                 type="date" 
                 placeholder="Date of Visit" 
-                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm"
               />
               <input 
                 type="time" 

@@ -37,14 +37,14 @@ export default function Offers() {
         </div>
 
         {/* Offers Grid */}
-        <div className="grid md:grid-cols-2 gap-8 justify-center">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 justify-center">
           {offers.map((offer, idx) => (
-            <div key={idx} className={`border-4 ${offer.borderStyle} ${offer.bgColor} p-8 rounded-lg text-center relative`}>
+            <div key={idx} className={`border-4 ${offer.borderStyle} ${offer.bgColor} p-4 md:p-8 rounded-lg text-center relative`}>
               {/* Profile Circle */}
-              <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                <div className="w-32 h-32 rounded-full bg-white border-4 border-gray-300 flex items-center justify-center overflow-hidden">
+              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-white border-4 border-gray-300 flex items-center justify-center overflow-hidden">
                   {idx === 0 ? (
-                    <div className="text-4xl">🏠</div>
+                    <div className="text-2xl md:text-3xl">🏠</div>
                   ) : (
                     <img 
                       src="/placeholder-user.jpg" 
@@ -55,9 +55,9 @@ export default function Offers() {
                 </div>
               </div>
 
-              <div className="mt-20">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{offer.title}</h3>
-                <p className="text-gray-700 text-sm mb-6">{offer.description}</p>
+              <div className="mt-14 md:mt-16">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">{offer.title}</h3>
+                <p className="text-gray-700 text-xs md:text-sm mb-4 md:mb-6">{offer.description}</p>
                 <div className="text-3xl font-bold text-purple-600">{offer.discount}</div>
               </div>
             </div>
