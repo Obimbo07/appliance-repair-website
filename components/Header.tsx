@@ -282,7 +282,7 @@ export default function Header() {
           
           <div className="flex items-center gap-2 text-orange-500 font-semibold pt-2 border-t border-gray-200">
             <Phone size={20} />
-            <span>0716 029 811 / 0723 585 580</span>
+            <span>0704 118 177 / 0716 029 811</span>
           </div>
           <div className="flex flex-col gap-2 pt-2 border-t border-gray-200">
             <a href="https://wa.me/254704118177?text=Hello%20Applicare" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-4 py-2 font-bold hover:bg-green-600 text-center rounded transition-all duration-300 hover:scale-[1.02]">
