@@ -57,7 +57,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[62vh] md:h-[70vh] flex items-center pt-20 md:pt-10 lg:pt-6 overflow-hidden transition-all duration-700"
+      className="relative min-h-[68vh] md:min-h-[74vh] xl:min-h-[78vh] flex items-center pt-20 md:pt-12 xl:pt-8 overflow-hidden transition-all duration-700"
     >
       {/* Video or Image Background */}
       {slide.video ? (
@@ -113,9 +113,9 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 md:gap-10 items-start lg:items-start py-8 md:py-0 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 xl:grid-cols-[1.12fr_0.88fr] gap-8 md:gap-10 items-start xl:items-center py-8 md:py-2 xl:py-0 relative z-10">
         {/* Left Content */}
-        <div className="text-white space-y-6">
+        <div className="text-white space-y-6 max-w-2xl">
           <div 
             key={`badge-${currentSlide}`}
             className="inline-block bg-white text-gray-800 px-3 py-1 text-sm font-semibold animate-fadeInDown"
@@ -124,7 +124,7 @@ export default function Hero() {
           </div>
           <h1 
             key={`title-${currentSlide}`}
-            className="text-5xl lg:text-6xl font-bold leading-tight animate-fadeInUp"
+            className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight animate-fadeInUp"
           >
             <span className="text-yellow-400">{slide.title}</span>
             <br />
@@ -136,10 +136,10 @@ export default function Hero() {
           >
             {slide.description}
           </p>
-          <div className="flex gap-4 pt-4 animate-fadeInUp animation-delay-400">
+          <div className="flex flex-wrap items-center gap-4 pt-4 animate-fadeInUp animation-delay-400">
             <button 
               onClick={openBooking}
-              className="bg-orange-500 text-white px-8 py-3 font-bold hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg"
+              className="bg-orange-500 text-white px-8 py-3 font-bold whitespace-nowrap hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg"
             >
               Book Service
             </button>
@@ -151,7 +151,7 @@ export default function Hero() {
         </div>
 
         {/* Right - Booking Form */}
-        <div className="bg-black/90 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-2xl w-full max-w-sm md:max-w-md lg:max-w-[440px] lg:ml-auto lg:mt-6 animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
+        <div className="bg-black/90 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-2xl w-full max-w-sm md:max-w-md xl:max-w-[440px] xl:ml-auto xl:mt-4 animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
           <h2 className="text-white text-lg md:text-xl font-bold mb-1">Request Your Services</h2>
           <p className="text-gray-300 text-[11px] md:text-xs mb-2">Schedule your home appliance repair online – 24/7 availability</p>
           

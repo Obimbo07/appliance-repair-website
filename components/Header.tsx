@@ -108,12 +108,12 @@ export default function Header() {
             </Link> 
 
             {/* Navigation */}
-            <nav className="hidden lg:flex items-center gap-1 flex-1">
-              <Link href="/" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
+            <nav className="hidden xl:flex items-center gap-0.5 flex-1 min-w-0">
+              <Link href="/" className="flex items-center gap-1 px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group whitespace-nowrap">
                 Home
               </Link>
               <div className="relative group">
-                <Link href="/services" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
+                <Link href="/services" className="flex items-center gap-1 px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 whitespace-nowrap">
                   Services
                   <ChevronDown size={14} className="text-gray-400 group-hover:text-purple-600 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
@@ -145,34 +145,34 @@ export default function Header() {
                   </Link>
                 </div>
               </div>
-              <Link href="/about" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
+              <Link href="/about" className="flex items-center gap-1 px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group whitespace-nowrap">
                 About
               </Link>
-              <Link href="/projects" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
+              <Link href="/projects" className="px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 whitespace-nowrap">
                 Projects
               </Link>
-              <Link href="/about#testimonials" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
+              <Link href="/about#testimonials" className="px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 whitespace-nowrap">
                 Reviews
               </Link>
-              <Link href="/blog" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
+              <Link href="/blog" className="px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 whitespace-nowrap">
                 Blog
               </Link>
-              <Link href="/careers" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
+              <Link href="/careers" className="px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 whitespace-nowrap">
                 Careers
               </Link>
-              <Link href="/training" className="px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300">
+              <Link href="/training" className="px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 whitespace-nowrap">
                 Training
               </Link>
-              <Link href="/contact" className="flex items-center gap-1 px-4 py-6 text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
+              <Link href="/contact" className="flex items-center gap-1 px-3 py-6 text-sm text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group whitespace-nowrap">
                 Contact
               </Link>
             </nav>
 
             {/* Book Service Button */}
-            <div className="hidden lg:flex items-center">
+            <div className="hidden xl:flex items-center shrink-0 pl-3">
               <button 
                 onClick={openBooking}
-                className="bg-orange-500 text-white px-6 py-3 font-bold hover:bg-orange-600 transition-all duration-300 hover:shadow-lg"
+                className="bg-orange-500 text-white px-5 py-3 font-bold whitespace-nowrap hover:bg-orange-600 transition-all duration-300 hover:shadow-lg"
               >
                 Book Service
               </button>
@@ -181,7 +181,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden ml-auto p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 self-center"
+              className="xl:hidden ml-auto p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 self-center"
               aria-label="Toggle menu"
             >
               <div className="transition-transform duration-300">
@@ -193,7 +193,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden bg-white border-t border-gray-200 overflow-hidden transition-all duration-300 ${
+      <div className={`xl:hidden bg-white border-t border-gray-200 overflow-hidden transition-all duration-300 ${
         isOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
       }`}>
         <nav className="flex flex-col gap-4 p-4 text-gray-700">
