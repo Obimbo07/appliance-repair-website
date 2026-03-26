@@ -53,9 +53,9 @@ export default function Features() {
   return (
     <section ref={sectionRef} className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Left Content */}
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`h-full flex flex-col transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               We Bring Your Appliances Back to Life
             </h2>
@@ -63,7 +63,7 @@ export default function Features() {
               Don't let a malfunctioning appliance disrupt your life. AppliCare is here to provide comprehensive repair solutions for all major brands and models. We offer transparent pricing, convenient online booking, and a satisfaction guarantee, so you can have peace of mind knowing your appliances are in good hands.
             </p>
             <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="relative mt-8 group aspect-[3/2] overflow-hidden rounded-lg">
+              <div className="relative mt-6 lg:mt-auto group aspect-[3/2] w-full max-w-[620px] overflow-hidden rounded-lg">
                 <Image 
                   src={'/image5.jpeg'} 
                   alt="Appliance Repair" 
@@ -77,7 +77,7 @@ export default function Features() {
           </div>
 
           {/* Right Features Grid */}
-          <div className={`bg-amber-50 p-8 md:p-10 rounded-lg transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`h-full bg-amber-50 p-8 md:p-10 rounded-lg flex flex-col transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, idx) => (
                 <div 
@@ -95,7 +95,7 @@ export default function Features() {
             </div>
 
             {/* CTA Section */}
-            <div className={`flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start mt-10 pt-8 border-t border-amber-200 transition-all duration-700 ${
+            <div className={`flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start mt-8 md:mt-10 pt-6 md:pt-8 border-t border-amber-200 transition-all duration-700 lg:mt-auto ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             style={{ transitionDelay: '800ms' }}

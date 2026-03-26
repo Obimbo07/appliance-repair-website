@@ -113,7 +113,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start lg:items-center py-8 md:py-0 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 md:gap-10 items-start lg:items-start py-8 md:py-0 relative z-10">
         {/* Left Content */}
         <div className="text-white space-y-6">
           <div 
@@ -151,26 +151,26 @@ export default function Hero() {
         </div>
 
         {/* Right - Booking Form */}
-        <div className="bg-black/90 backdrop-blur-sm p-3 md:p-6 rounded-lg shadow-2xl w-full animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
+        <div className="bg-black/90 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-2xl w-full max-w-sm md:max-w-md lg:max-w-[440px] lg:ml-auto animate-fadeInRight transform hover:shadow-orange-500/20 transition-shadow duration-500">
           <h2 className="text-white text-lg md:text-xl font-bold mb-1">Request Your Services</h2>
-          <p className="text-gray-300 text-xs mb-3">Schedule your home appliance repair online – 24/7 availability</p>
+          <p className="text-gray-300 text-[11px] md:text-xs mb-2">Schedule your home appliance repair online – 24/7 availability</p>
           
           <form className="space-y-2">
             <input 
               type="text" 
               placeholder="Your Name" 
-              className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+              className="w-full px-2.5 md:px-3 py-1.5 md:py-2 text-xs md:text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <input 
                 type="tel" 
                 placeholder="Phone" 
-                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-2.5 md:px-3 py-1.5 md:py-2 text-xs md:text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
               <input 
                 type="email" 
                 placeholder="Email" 
-                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-2.5 md:px-3 py-1.5 md:py-2 text-xs md:text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <input 
@@ -192,12 +192,12 @@ export default function Hero() {
               <input 
                 type="time" 
                 placeholder="Time of Visit" 
-                className="w-full px-3 py-2 text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
+                className="w-full px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm rounded bg-white border-2 border-gray-300 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition-all duration-300 shadow-sm" 
               />
             </div>
             <button 
               type="submit" 
-              className="w-full bg-orange-500 text-white py-2.5 text-sm font-bold hover:bg-orange-600 rounded transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+              className="w-full bg-orange-500 text-white py-2 text-xs md:text-sm font-bold hover:bg-orange-600 rounded transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
             >
               Schedule Your Booking
             </button>
