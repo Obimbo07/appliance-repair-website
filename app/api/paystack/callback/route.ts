@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { getSiteOrigin, paystackReferenceSchema } from '@/lib/security'
 
 export const runtime = 'edge'
 
@@ -40,16 +41,18 @@ async function verifyPaystackReference(reference: string) {
 }
 
 export async function GET(request: NextRequest) {
-  const origin = request.nextUrl.origin
+  const origin = getSiteOrigin()
   const searchParams = request.nextUrl.searchParams
-  const reference = searchParams.get('reference') || searchParams.get('trxref')
+  const rawReference = searchParams.get('reference') || searchParams.get('trxref')
 
   const redirectUrl = new URL('/payment-status', origin)
 
-  if (!reference) {
+  const parsedReference = paystackReferenceSchema.safeParse(rawReference)
+  if (!parsedReference.success) {
     redirectUrl.searchParams.set('status', 'missing_reference')
     return NextResponse.redirect(redirectUrl)
   }
+  const reference = parsedReference.data
 
   try {
     const verification = await verifyPaystackReference(reference)

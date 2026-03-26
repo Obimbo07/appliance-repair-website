@@ -1,21 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { calculateDepositAmount, pricedServices } from '@/lib/service-pricing'
+import {
+  getSiteOrigin,
+  initializePaymentSchema,
+  isAllowedRequestOrigin,
+  noStoreHeaders,
+} from '@/lib/security'
 
 export const runtime = 'edge'
-
-interface InitializePaymentBody {
-  serviceId: string
-  customerName: string
-  customerEmail: string
-  phone: string
-  serviceType: string
-  appliance: string
-  brand?: string
-  issue?: string
-  address: string
-  preferredDate: string
-  preferredTime?: string
-}
 
 function getPaystackConfig() {
   const secretKey = process.env.PAYSTACK_SECRET_KEY
@@ -31,28 +23,42 @@ function getPaystackConfig() {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json() as Partial<InitializePaymentBody>
-
-    if (
-      !body.serviceId ||
-      !body.customerName ||
-      !body.customerEmail ||
-      !body.phone ||
-      !body.serviceType ||
-      !body.appliance ||
-      !body.address ||
-      !body.preferredDate
-    ) {
-      return NextResponse.json({ message: 'Missing required booking fields' }, { status: 400 })
+    const requestOrigin = request.headers.get('origin')
+    if (!isAllowedRequestOrigin(requestOrigin, request.nextUrl.origin)) {
+      return NextResponse.json(
+        { message: 'Forbidden origin' },
+        { status: 403, headers: noStoreHeaders() },
+      )
     }
+
+    const contentType = request.headers.get('content-type') || ''
+    if (!contentType.toLowerCase().includes('application/json')) {
+      return NextResponse.json(
+        { message: 'Invalid content type' },
+        { status: 415, headers: noStoreHeaders() },
+      )
+    }
+
+    const rawBody = await request.json()
+    const parsed = initializePaymentSchema.safeParse(rawBody)
+    if (!parsed.success) {
+      return NextResponse.json(
+        { message: 'Invalid booking payload' },
+        { status: 400, headers: noStoreHeaders() },
+      )
+    }
+    const body = parsed.data
 
     const service = pricedServices.find((item) => item.id === body.serviceId)
     if (!service) {
-      return NextResponse.json({ message: 'Invalid service selected' }, { status: 400 })
+      return NextResponse.json(
+        { message: 'Invalid service selected' },
+        { status: 400, headers: noStoreHeaders() },
+      )
     }
 
     const { secretKey } = getPaystackConfig()
-    const callbackUrl = process.env.PAYSTACK_CALLBACK_URL || `${request.nextUrl.origin}/api/paystack/callback`
+    const callbackUrl = process.env.PAYSTACK_CALLBACK_URL || `${getSiteOrigin()}/api/paystack/callback`
     const amountKes = calculateDepositAmount(service.priceKes)
     const amountKobo = amountKes * 100
 
@@ -97,18 +103,24 @@ export async function POST(request: NextRequest) {
     if (!initResponse.ok || !initData.status || !initData.data?.authorization_url) {
       return NextResponse.json(
         { message: initData.message || 'Unable to initialize Paystack transaction' },
-        { status: 502 },
+        { status: 502, headers: noStoreHeaders() },
       )
     }
 
-    return NextResponse.json({
-      authorizationUrl: initData.data.authorization_url,
-      reference: initData.data.reference,
-      amountKes,
-      service: service.name,
-    })
+    return NextResponse.json(
+      {
+        authorizationUrl: initData.data.authorization_url,
+        reference: initData.data.reference,
+        amountKes,
+        service: service.name,
+      },
+      { headers: noStoreHeaders() },
+    )
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Unexpected server error'
-    return NextResponse.json({ message }, { status: 500 })
+    const message =
+      error instanceof Error && error.message === 'Missing PAYSTACK_SECRET_KEY'
+        ? 'Server payment configuration error'
+        : 'Unexpected server error'
+    return NextResponse.json({ message }, { status: 500, headers: noStoreHeaders() })
   }
 }

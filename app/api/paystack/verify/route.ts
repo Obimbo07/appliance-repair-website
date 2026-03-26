@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { noStoreHeaders, paystackReferenceSchema } from '@/lib/security'
 
 export const runtime = 'edge'
 
@@ -14,11 +15,16 @@ function getPaystackSecretKey(): string {
 
 export async function GET(request: NextRequest) {
   try {
-    const reference = request.nextUrl.searchParams.get('reference')
+    const rawReference = request.nextUrl.searchParams.get('reference')
+    const parsedReference = paystackReferenceSchema.safeParse(rawReference)
 
-    if (!reference) {
-      return NextResponse.json({ message: 'reference query param is required' }, { status: 400 })
+    if (!parsedReference.success) {
+      return NextResponse.json(
+        { message: 'reference query param is invalid' },
+        { status: 400, headers: noStoreHeaders() },
+      )
     }
+    const reference = parsedReference.data
 
     const secretKey = getPaystackSecretKey()
 
@@ -42,19 +48,28 @@ export async function GET(request: NextRequest) {
     }
 
     if (!verifyResponse.ok || !verifyData.status) {
-      return NextResponse.json({ message: verifyData.message || 'Unable to verify payment' }, { status: 502 })
+      return NextResponse.json(
+        { message: verifyData.message || 'Unable to verify payment' },
+        { status: 502, headers: noStoreHeaders() },
+      )
     }
 
-    return NextResponse.json({
-      paid: verifyData.data?.status === 'success',
-      status: verifyData.data?.status,
-      reference: verifyData.data?.reference,
-      amount: verifyData.data?.amount,
-      currency: verifyData.data?.currency,
-      metadata: verifyData.data?.metadata,
-    })
+    return NextResponse.json(
+      {
+        paid: verifyData.data?.status === 'success',
+        status: verifyData.data?.status,
+        reference: verifyData.data?.reference,
+        amount: verifyData.data?.amount,
+        currency: verifyData.data?.currency,
+        metadata: verifyData.data?.metadata,
+      },
+      { headers: noStoreHeaders() },
+    )
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Unexpected server error'
-    return NextResponse.json({ message }, { status: 500 })
+    const message =
+      error instanceof Error && error.message === 'Missing PAYSTACK_SECRET_KEY'
+        ? 'Server payment configuration error'
+        : 'Unexpected server error'
+    return NextResponse.json({ message }, { status: 500, headers: noStoreHeaders() })
   }
 }
