@@ -84,8 +84,11 @@ export const metadata: Metadata = {
       }
     : {}),
   icons: {
-    icon: [{ url: '/applicare-logo.png', type: 'image/png' }],
-    shortcut: '/applicare-logo.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/applicare-logo-square.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: '/favicon.ico',
     apple: '/applicare-logo.png',
   },
 }
