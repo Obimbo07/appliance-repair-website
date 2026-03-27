@@ -81,7 +81,7 @@ const nextConfig = {
   async redirects() {
     return legacyFaviconRoutes.map((source) => ({
       source,
-      destination: '/favicon.ico?v=20260327',
+      destination: '/favicon.ico?v=20260327c',
       permanent: true,
     }))
   },
