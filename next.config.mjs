@@ -47,7 +47,15 @@ const securityHeaders = [
 const faviconHeaders = [
   {
     key: 'Cache-Control',
-    value: 'public, max-age=0, s-maxage=0, must-revalidate',
+    value: 'no-store, no-cache, must-revalidate, proxy-revalidate',
+  },
+  {
+    key: 'Pragma',
+    value: 'no-cache',
+  },
+  {
+    key: 'Expires',
+    value: '0',
   },
 ]
 
@@ -89,6 +97,22 @@ const nextConfig = {
       },
       {
         source: '/applicare-logo-square.png',
+        headers: faviconHeaders,
+      },
+      {
+        source: '/icon-light-32x32.png',
+        headers: faviconHeaders,
+      },
+      {
+        source: '/icon-dark-32x32.png',
+        headers: faviconHeaders,
+      },
+      {
+        source: '/icon.svg',
+        headers: faviconHeaders,
+      },
+      {
+        source: '/apple-icon.png',
         headers: faviconHeaders,
       },
     ]
