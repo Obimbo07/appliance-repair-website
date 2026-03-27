@@ -44,6 +44,20 @@ const securityHeaders = [
   },
 ]
 
+const faviconHeaders = [
+  {
+    key: 'Cache-Control',
+    value: 'public, max-age=0, s-maxage=0, must-revalidate',
+  },
+]
+
+const legacyFaviconRoutes = [
+  '/icon-light-32x32.png',
+  '/icon-dark-32x32.png',
+  '/icon.svg',
+  '/apple-icon.png',
+]
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   turbopack: {
@@ -56,11 +70,26 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return legacyFaviconRoutes.map((source) => ({
+      source,
+      destination: '/favicon.ico?v=20260327',
+      permanent: true,
+    }))
+  },
   async headers() {
     return [
       {
         source: '/:path*',
         headers: securityHeaders,
+      },
+      {
+        source: '/favicon.ico',
+        headers: faviconHeaders,
+      },
+      {
+        source: '/applicare-logo-square.png',
+        headers: faviconHeaders,
       },
     ]
   },
