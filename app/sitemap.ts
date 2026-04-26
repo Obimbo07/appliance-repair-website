@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { services } from '@/lib/service-data'
 import { blogPosts } from '@/lib/blog-data'
 
+export const revalidate = 3600
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://applicare.co.ke'
   

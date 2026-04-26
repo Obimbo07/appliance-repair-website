@@ -1,8 +1,19 @@
 import React from 'react'
+import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Briefcase, Users, TrendingUp, Heart, Clock, Award } from 'lucide-react'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Join Our Team | Appliance Repair Technician Jobs in Kenya',
+  description: 'Career opportunities at Applicare. Hire certified technicians in Nairobi & Nakuru. Competitive pay, training, and growth. Apply now for appliance repair positions.',
+  openGraph: {
+    title: 'Join Applicare Team | Appliance Repair Careers',
+    description: 'Join our team of certified appliance repair technicians in Kenya. Competitive compensation and career growth opportunities.',
+    type: 'website',
+  },
+}
 
 const benefits = [
   {

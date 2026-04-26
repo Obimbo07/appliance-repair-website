@@ -101,16 +101,16 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-yellow-400">
+              <a href="https://www.facebook.com/profile.php?id=61586070070904" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-400" aria-label="Facebook">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-400" aria-label="X (Twitter)">
                 <Twitter size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-400" aria-label="LinkedIn">
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400">
+              <a href="https://www.instagram.com/applicare.ke?igsh=MTZvZDdyeHVzajZmcQ==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-400" aria-label="Instagram">
                 <Instagram size={24} />
               </a>
             </div>

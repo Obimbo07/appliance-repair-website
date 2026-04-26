@@ -74,9 +74,11 @@ export default function Hero() {
           <source src={slide.video} type="video/quicktime" />
         </video>
       ) : (
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${slide.image})` }}
+        <img 
+          src={slide.image}
+          alt="Appliance repair service"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
         />
       )}
       
@@ -139,9 +141,9 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-4 animate-fadeInUp animation-delay-400">
             <button 
               onClick={openBooking}
-              className="bg-orange-500 text-white px-8 py-3 font-bold whitespace-nowrap hover:bg-orange-600 hover:scale-105 transition-all duration-300 hover:shadow-lg"
+              className="bg-orange-500 text-white px-8 py-4 font-bold whitespace-nowrap hover:bg-orange-600 hover:scale-110 transition-all duration-300 hover:shadow-2xl shadow-lg transform hover:-translate-y-1 text-lg rounded-lg"
             >
-              Book Service
+              ⭐ Get Free Quote
             </button>
             <a href="tel:0704118177" className="flex items-center gap-2 text-white font-semibold hover:text-yellow-400 transition-colors duration-300">
               <Phone size={20} className="animate-pulse" />

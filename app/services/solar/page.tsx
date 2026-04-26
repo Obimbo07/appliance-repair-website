@@ -10,10 +10,6 @@ import { Check, ArrowLeft, Phone, CheckCircle2, Sun, Zap, Battery, Award, Home, 
 export default function SolarPage() {
   const { openBooking } = useBooking()
 
-  React.useEffect(() => {
-    document.title = 'Solar System Installation & Maintenance | Applicare - Kenya Solar Energy Solutions'
-  }, [])
-
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />

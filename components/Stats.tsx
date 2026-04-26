@@ -126,7 +126,9 @@ export default function Stats() {
           <div className={`relative aspect-[4/3] overflow-hidden rounded-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <img 
               src="/image3.jpeg" 
-              alt="Customer testimonial"
+              alt="Satisfied appliance repair customer"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover shadow-xl hover:shadow-2xl transition-shadow duration-500"
             />
             <div className="absolute -bottom-6 -right-6 bg-white px-6 py-4 rounded-lg shadow-lg animate-float">
@@ -161,6 +163,8 @@ export default function Stats() {
                           <img 
                             src={testimonial.image} 
                             alt={testimonial.name}
+                            loading="lazy"
+                            decoding="async"
                             className="w-16 h-16 rounded-full object-cover ring-4 ring-blue-400"
                           />
                           <div>

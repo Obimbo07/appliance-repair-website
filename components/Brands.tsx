@@ -107,6 +107,8 @@ export default function Brands() {
                   <img
                     src={brand.logo}
                     alt={`${brand.name} logo`}
+                    loading="lazy"
+                    decoding="async"
                     className="max-h-10 max-w-[120px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
                 </a>
@@ -128,7 +130,7 @@ export default function Brands() {
           {/* Guarantee Badge */}
           <div className="flex justify-center mb-8">
             <div className="relative w-50 h-32">
-              <Image src="/emblem-removebg-preview.png" alt="Guaranteed Satisfaction Badge" fill className="object-contain" />
+              <Image src="/emblem-removebg-preview.png" alt="Guaranteed satisfaction and service warranty badge" fill className="object-contain" />
             </div>
           </div>
 

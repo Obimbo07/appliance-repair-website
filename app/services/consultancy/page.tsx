@@ -10,10 +10,6 @@ import { Check, ArrowLeft, Phone, CheckCircle2, Lightbulb, Users, Target } from 
 export default function ConsultancyPage() {
   const { openBooking } = useBooking()
 
-  React.useEffect(() => {
-    document.title = 'Appliance Consultancy Services | Applicare - Expert Advice Kenya'
-  }, [])
-
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />

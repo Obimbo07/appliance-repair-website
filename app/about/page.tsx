@@ -1,10 +1,19 @@
-'use client'
-
-import React, { useEffect } from 'react'
+import React from 'react'
+import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AnimatedCounter from '@/components/AnimatedCounter'
 import { Users, Award, Clock, Shield, Target, Heart } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'About Applicare | Professional Appliance Repair in Kenya',
+  description: 'Learn about Applicare, Kenya\'s trusted appliance repair company with 12+ years experience. Certified technicians serving Nairobi, Nakuru & surrounding areas.',
+  openGraph: {
+    title: 'About Applicare | Professional Appliance Repair in Kenya',
+    description: 'Founded in 2023, Applicare provides honest, reliable, and affordable appliance repair services across Kenya.',
+    type: 'website',
+  },
+}
 
 const values = [
   {
@@ -37,14 +46,6 @@ const stats = [
 ]
 
 export default function AboutPage() {
-  useEffect(() => {
-    document.title = 'About Us | Applicare - Professional Appliance Repair in Kenya'
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Learn about Applicare, Kenyas trusted appliance repair company. Founded in 2023, we provide honest, reliable, and affordable repair services across Nairobi, Nakuru & surrounding areas.')
-    }
-  }, [])
-
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />

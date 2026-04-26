@@ -77,7 +77,7 @@ export default function ServiceGrid() {
 
               <h3 className="font-bold text-lg text-gray-800 mb-3">{service.title}</h3>
               <p className="text-gray-700 text-sm mb-4">{service.description}</p>
-              <a href="#" className="text-purple-600 font-semibold text-sm hover:text-purple-800">
+              <a href="/services" className="text-purple-600 font-semibold text-sm hover:text-purple-800">
                 Learn More »
               </a>
             </div>

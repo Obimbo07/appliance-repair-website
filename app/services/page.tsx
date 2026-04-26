@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   },
 }
 
+export const revalidate = 3600
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-gray-50">

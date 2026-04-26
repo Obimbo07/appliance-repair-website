@@ -1,8 +1,19 @@
 import React from 'react'
+import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { GraduationCap, Wrench, Users, Clock, Award, CheckCircle, BookOpen, Settings } from 'lucide-react'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Appliance Repair Training | Professional Certification in Kenya',
+  description: 'Professional appliance repair training courses in Kenya. Become a certified technician. Refrigerator, washing machine, HVAC, and solar training available.',
+  openGraph: {
+    title: 'Professional Appliance Repair Training | Applicare',
+    description: 'Comprehensive training programs for appliance repair certification in Kenya. Learn from industry experts.',
+    type: 'website',
+  },
+}
 
 const trainingPrograms = [
   {

@@ -10,10 +10,6 @@ import { Check, ArrowLeft, Phone, CheckCircle2, Calendar, Shield, Wrench, Clock 
 export default function MaintenancePage() {
   const { openBooking } = useBooking()
 
-  React.useEffect(() => {
-    document.title = 'Appliance Maintenance Services | Applicare - Preventive Care Kenya'
-  }, [])
-
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />

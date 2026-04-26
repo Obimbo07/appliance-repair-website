@@ -1,30 +1,36 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import { Refrigerator, Waves, Coffee, Tv, Sun, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const services = [
   {
+    slug: 'refrigerator-repair',
     icon: Refrigerator,
     title: 'Refrigerator Repair',
     description: 'We diagnose and fix cooling issues, leaks, unusual noises, and more to keep your food fresh and safe.',
   },
   {
+    slug: 'washing-machine-repair',
     icon: Waves,
     title: 'Washing Machine Repair',
     description: 'From leaks and drainage issues to spin cycle malfunctions, we will get your laundry back on track.',
   },
   {
+    slug: 'oven-repair',
     icon: Coffee,
     title: 'Microwave & Oven Repair',
     description: 'Expert repair for microwaves, ovens, and cooking appliances. We handle electrical issues, heating problems, and more.',
   },
   {
+    slug: 'other-appliance-repair',
     icon: Tv,
     title: 'Other Appliances',
     description: 'Dishwashers, water heaters, dryers, and more. We repair all major household appliances from top brands.',
   },
   {
+    slug: 'solar-system-installation',
     icon: Sun,
     title: 'Solar System Installation',
     description: 'Professional installation of solar panels, inverters, and battery systems. Go green and save on electricity bills with our expert solar solutions.',
@@ -109,10 +115,10 @@ export default function Services() {
                 <p className="text-gray-700 text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <a href="#" className="text-purple-600 font-bold hover:text-purple-700 transition inline-flex items-center gap-1 group">
+                <Link href="/services" className="text-purple-600 font-bold hover:text-purple-700 transition inline-flex items-center gap-1 group">
                   Learn More 
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -144,10 +150,10 @@ export default function Services() {
               <p className="text-gray-700 text-base leading-relaxed mb-6 ml-22">
                 {service.description}
               </p>
-              <a href="#" className="text-purple-600 font-bold hover:text-purple-700 transition inline-flex items-center gap-1 ml-22 group/link">
+              <Link href="/services" className="text-purple-600 font-bold hover:text-purple-700 transition inline-flex items-center gap-1 ml-22 group/link">
                 Learn More 
                 <span className="group-hover/link:translate-x-2 transition-transform duration-300">→</span>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

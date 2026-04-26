@@ -48,7 +48,9 @@ export default function Offers() {
                   ) : (
                     <img 
                       src="/placeholder-user.jpg" 
-                      alt="Profile"
+                      alt="Happy Applicare customer"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   )}

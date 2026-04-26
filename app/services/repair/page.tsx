@@ -10,10 +10,6 @@ import { Check, ArrowLeft, Phone, CheckCircle2, Wrench, Zap, AlertCircle, Award 
 export default function RepairPage() {
   const { openBooking } = useBooking()
 
-  React.useEffect(() => {
-    document.title = 'Appliance Repair Services | Applicare - Fast & Reliable Repairs Kenya'
-  }, [])
-
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />

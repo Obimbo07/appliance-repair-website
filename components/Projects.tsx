@@ -48,6 +48,8 @@ export default function Projects() {
               <img 
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full aspect-[3/2] md:aspect-[4/3] object-cover group-hover:scale-105 transition-transform"
               />
               {idx === 2 && (

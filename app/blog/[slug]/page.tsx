@@ -2,6 +2,8 @@ import { getBlogPost, getRelatedPosts, getAllBlogSlugs } from '@/lib/blog-data'
 import BlogPostContent from '@/components/BlogPostContent'
 import { Metadata } from 'next'
 
+export const revalidate = 3600
+
 // Generate static params for all blog posts at build time
 export function generateStaticParams() {
   const slugs = getAllBlogSlugs()

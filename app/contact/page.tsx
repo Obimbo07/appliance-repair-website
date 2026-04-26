@@ -1,19 +1,11 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'
 
 export default function ContactPage() {
-  useEffect(() => {
-    document.title = 'Contact Us | Applicare - Appliance Repair Kenya'
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact Applicare for professional appliance repair services in Kenya. Call 0704 118 177 or 0716 029 811. Serving Nairobi, Nakuru & surrounding areas.')
-    }
-  }, [])
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,13 +24,12 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission - in production, you'd send this to an API
     const message = `New Contact Form Submission:
 Name: ${formData.name}
 Email: ${formData.email}
-Phone: ${formData.phone}
-Subject: ${formData.subject}
-Message: ${formData.message}`
+  Phone: ${formData.phone}
+  Subject: ${formData.subject}
+  Message: ${formData.message}`
     
     // Open WhatsApp with the message
     window.open(`https://wa.me/254704118177?text=${encodeURIComponent(message)}`, '_blank')
@@ -142,7 +133,8 @@ Message: ${formData.message}`
 
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8 animate-fadeInRight hover:shadow-xl transition-shadow duration-500">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Get Your Free Quote</h2>
+              <p className="text-gray-600 mb-6 text-sm">Share your details and issue so our team can respond quickly.</p>
               
               {submitted && (
                 <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg animate-fadeInUp">
@@ -225,7 +217,7 @@ Message: ${formData.message}`
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-orange-500 text-white py-3 px-6 font-bold rounded-md hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full bg-orange-500 text-white py-3 px-6 font-bold rounded-md hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 text-lg"
                 >
                   <Send size={20} />
                   {isSubmitting ? 'Sending...' : 'Send Message'}

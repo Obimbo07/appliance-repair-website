@@ -1,6 +1,16 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 
 export const runtime = 'edge'
+
+export const metadata: Metadata = {
+  title: 'Payment Status | Applicare Appliance Repair Kenya',
+  description:
+    'Check your Applicare payment confirmation status and next steps. Contact support quickly if your payment needs manual verification.',
+  alternates: {
+    canonical: '/payment-status',
+  },
+}
 
 type SearchParams = {
   status?: string

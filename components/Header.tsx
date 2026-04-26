@@ -63,10 +63,10 @@ export default function Header() {
                 <a href="https://www.facebook.com/profile.php?id=61586070070904" className="hover:text-orange-500 transition-colors duration-300" aria-label="Facebook">
                   <FacebookIcon />
                 </a>
-                <a href="#" className="hover:text-orange-500 transition-colors duration-300" aria-label="X (Twitter)">
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-300" aria-label="X (Twitter)">
                   <XIcon />
                 </a>
-                <a href="#" className="hover:text-orange-500 transition-colors duration-300" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-300" aria-label="LinkedIn">
                   <LinkedInIcon />
                 </a>
                 <a href="https://www.instagram.com/applicare.ke?igsh=MTZvZDdyeHVzajZmcQ==" className="hover:text-orange-500 transition-colors duration-300" aria-label="Instagram">
@@ -266,16 +266,16 @@ export default function Header() {
           
           {/* Social Links - Mobile */}
           <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61586070070904" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="Facebook">
               <FacebookIcon />
             </a>
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="X (Twitter)">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="X (Twitter)">
               <XIcon />
             </a>
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="LinkedIn">
               <LinkedInIcon />
             </a>
-            <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="Instagram">
+            <a href="https://www.instagram.com/applicare.ke?igsh=MTZvZDdyeHVzajZmcQ==" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors duration-300" aria-label="Instagram">
               <InstagramIcon />
             </a>
           </div>

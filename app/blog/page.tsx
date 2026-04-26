@@ -1,11 +1,11 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Calendar, Clock, ArrowRight, Search, Tag } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
+import Script from 'next/script'
 import { blogPosts } from '@/lib/blog-data'
 
 const categories = [
@@ -19,14 +19,6 @@ const categories = [
 ]
 
 export default function BlogPage() {
-  useEffect(() => {
-    document.title = 'Blog | Applicare - Appliance Repair Tips & Guides'
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Expert appliance repair tips, maintenance guides, and buying advice. Learn how to care for your washing machines, refrigerators, cookers & more from Kenyas trusted repair experts.')
-    }
-  }, [])
-
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
 
@@ -58,7 +50,9 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <script
+      <Script
+        id="blog-collection-schema"
+        strategy="afterInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionJsonLd) }}
       />
@@ -104,6 +98,8 @@ export default function BlogPage() {
                     <img
                       src={post.image}
                       alt={post.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -169,6 +165,8 @@ export default function BlogPage() {
                       <img
                         src={post.image}
                         alt={post.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4">

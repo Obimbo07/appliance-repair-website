@@ -1,7 +1,18 @@
 import React from 'react'
+import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'Appliance Repair Projects | Case Studies & Success Stories',
+  description: 'See our completed appliance repair projects. Washing machines, refrigerators, AC units and more fixed successfully. Real customer stories from Nairobi & Nakuru.',
+  openGraph: {
+    title: 'Appliance Repair Success Stories | Applicare Projects',
+    description: 'Browse our completed repair projects and customer success stories across Kenya.',
+    type: 'website',
+  },
+}
 
 const projects = [
   {
