@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Phone, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useBooking } from './BookingProvider'
 
@@ -74,10 +75,13 @@ export default function Hero() {
           <source src={slide.video} type="video/quicktime" />
         </video>
       ) : (
-        <img 
-          src={slide.image}
+        <Image
+          src={slide.image || '/image2.jpeg'}
           alt="Appliance repair service"
-          loading="lazy"
+          fill
+          sizes="100vw"
+          quality={75}
+          priority={true}
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}

@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 
 const offers = [
   {
@@ -46,11 +47,13 @@ export default function Offers() {
                   {idx === 0 ? (
                     <div className="text-xl md:text-2xl">🏠</div>
                   ) : (
-                    <img 
+                    <Image
                       src="/placeholder-user.jpg" 
                       alt="Happy Applicare customer"
-                      loading="lazy"
-                      decoding="async"
+                      width={96}
+                      height={96}
+                      quality={75}
+                      priority={false}
                       className="w-full h-full object-cover"
                     />
                   )}

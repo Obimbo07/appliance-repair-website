@@ -5,17 +5,17 @@ import Image from 'next/image'
 
 const brands = [
   // { name: "Bosch", logo: "https://cdn.worldvectorlogo.com/logos/bosch-logo-1.svg", url: "https://www.bosch.com" },
-  { name: "Samsung", logo: "https://cdn.worldvectorlogo.com/logos/samsung-8.svg", url: "https://www.samsung.com" },
-  { name: "LG", logo: "https://cdn.worldvectorlogo.com/logos/lg-electronics.svg", url: "https://www.lg.com" },
-  { name: "Electrolux", logo: "https://cdn.worldvectorlogo.com/logos/electrolux-2.svg", url: "https://www.electrolux.com" },
+  { name: "Samsung", logo: "/logos/samsung.svg", url: "https://www.samsung.com" },
+  { name: "LG", logo: "/logos/lg.svg", url: "https://www.lg.com" },
+  { name: "Electrolux", logo: "/logos/electrolux.svg", url: "https://www.electrolux.com" },
   // { name: "Haier", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Haier_logo.svg", url: "https://www.haier.com" },
-  { name: "Siemens", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Siemens-logo.svg/320px-Siemens-logo.svg.png", url: "https://www.siemens.com" },
-  { name: "Whirlpool", logo: "https://cdn.worldvectorlogo.com/logos/whirlpool-1.svg", url: "https://www.whirlpool.com" },
-  { name: "Hotpoint", logo: "https://cdn.worldvectorlogo.com/logos/hotpoint.svg", url: "https://www.hotpoint.com" },
-  { name: "Philips", logo: "https://cdn.worldvectorlogo.com/logos/philips-7.svg", url: "https://www.philips.com" },
-  { name: "Miele", logo: "https://cdn.worldvectorlogo.com/logos/miele-1.svg", url: "https://www.miele.com" },
+  { name: "Siemens", logo: "/logos/siemens.svg", url: "https://www.siemens.com" },
+  { name: "Whirlpool", logo: "/logos/whirlpool.svg", url: "https://www.whirlpool.com" },
+  { name: "Hotpoint", logo: "/logos/hotpoint.svg", url: "https://www.hotpoint.com" },
+  { name: "Philips", logo: "/logos/philips.svg", url: "https://www.philips.com" },
+  { name: "Miele", logo: "/logos/miele.svg", url: "https://www.miele.com" },
   // { name: "GE", logo: "https://cdn.worldvectorlogo.com/logos/ge-monogram.svg", url: "https://www.ge.com" },
-  { name: "Hisense", logo: "https://upload.wikimedia.org/wikipedia/commons/4/47/Hisense.svg", url: "https://www.hisense.com" },
+  { name: "Hisense", logo: "/logos/hisense.svg", url: "https://www.hisense.com" },
 ]
 
 export default function Brands() {
@@ -104,11 +104,13 @@ export default function Brands() {
                   className="min-w-[160px] h-20 bg-white/95 border border-white/20 shadow rounded-lg px-6 py-4 flex-shrink-0 flex items-center justify-center backdrop-blur hover:scale-105 hover:shadow-lg transition-all duration-300 group"
                   title={brand.name}
                 >
-                  <img
+                  <Image
                     src={brand.logo}
                     alt={`${brand.name} logo`}
-                    loading="lazy"
-                    decoding="async"
+                    width={120}
+                    height={40}
+                    quality={75}
+                    priority={false}
                     className="max-h-10 max-w-[120px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
                 </a>

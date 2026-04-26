@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Calendar, Clock, ArrowLeft, User, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
@@ -56,11 +57,13 @@ export default function BlogPostContent({ post, relatedPosts }: BlogPostContentP
       
       {/* Hero Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
-        <img
+        <Image
           src={post.image}
           alt={post.title}
-          loading="eager"
-          fetchPriority="high"
+          fill
+          sizes="100vw"
+          quality={75}
+          priority={false}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -167,11 +170,13 @@ export default function BlogPostContent({ post, relatedPosts }: BlogPostContentP
                   className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
+                    <Image
                       src={relatedPost.image}
                       alt={relatedPost.title}
-                      loading="lazy"
-                      decoding="async"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={75}
+                      priority={false}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>

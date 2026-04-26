@@ -59,18 +59,12 @@ const faviconHeaders = [
   },
 ]
 
-const legacyFaviconRoutes = [
-  '/icon-light-32x32.png',
-  '/icon-dark-32x32.png',
-  '/icon.svg',
-  '/apple-icon.png',
-]
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  compress: true,
   poweredByHeader: false,
   typescript: {
     ignoreBuildErrors: true,
@@ -84,18 +78,20 @@ const nextConfig = {
       },
     ],
   },
-  async redirects() {
-    return legacyFaviconRoutes.map((source) => ({
-      source,
-      destination: '/favicon.ico?v=20260327c',
-      permanent: true,
-    }))
-  },
   async headers() {
     return [
       {
         source: '/:path*',
         headers: securityHeaders,
+      },
+      {
+        source: '/:path((?!_next/static|.*\\..*).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, stale-while-revalidate=86400',
+          },
+        ],
       },
       {
         source: '/favicon.ico',

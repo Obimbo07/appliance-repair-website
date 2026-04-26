@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { useBooking } from './BookingProvider'
 
 const projects = [
@@ -45,11 +46,13 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {projects.map((project, idx) => (
             <div key={idx} className="relative rounded-lg overflow-hidden group cursor-pointer">
-              <img 
+              <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
-                loading="lazy"
-                decoding="async"
+                fill
+                sizes="(max-width: 1024px) 100vw, 25vw"
+                quality={75}
+                priority={false}
                 className="w-full aspect-[3/2] md:aspect-[4/3] object-cover group-hover:scale-105 transition-transform"
               />
               {idx === 2 && (

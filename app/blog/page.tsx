@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Calendar, Clock, ArrowRight, Search, Tag } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Script from 'next/script'
 import { blogPosts } from '@/lib/blog-data'
 
@@ -95,11 +96,13 @@ export default function BlogPage() {
                   className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                 >
                   <div className="relative aspect-[4/3]">
-                    <img
+                    <Image
                       src={post.image}
                       alt={post.title}
-                      loading="lazy"
-                      decoding="async"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={75}
+                      priority={false}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -162,11 +165,13 @@ export default function BlogPage() {
                 >
                   <Link href={`/blog/${post.slug}`}>
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <img
+                      <Image
                         src={post.image}
                         alt={post.title}
-                        loading="lazy"
-                        decoding="async"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        quality={75}
+                        priority={false}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4">
